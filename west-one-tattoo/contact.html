@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Booking — West One Tattoo, Oxford Street London</title>
+<meta name="description" content="Book your tattoo at West One Tattoo, 2nd Floor 51 Oxford Street, London W1D 2EF. WhatsApp +44 7475 255655. Open 7 days 11:00–20:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0b09; --bg2:#141110; --card:#1a1613; --line:#2a231d;
+  --gold:#c9a25e; --gold2:#e6c887; --cream:#f3ead9; --muted:#a89a83;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.08em;font-weight:700}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:36px;align-items:center;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase}
+.navlinks a{color:var(--muted);transition:color .25s}
+.navlinks a:hover,.navlinks a.active{color:var(--gold2)}
+.btn{display:inline-block;background:var(--gold);color:#141110;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;padding:14px 30px;border:1px solid var(--gold);transition:all .3s;cursor:pointer}
+.btn:hover{background:transparent;color:var(--gold2);border-color:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:#141110}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:2px;background:var(--gold2);margin:6px 0}
+@media(max-width:820px){
+  .burger{display:block}
+  .navlinks{position:fixed;top:72px;right:0;background:#141110;flex-direction:column;align-items:flex-start;padding:28px 36px;gap:22px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);transform:translateX(100%);transition:transform .3s}
+  .navlinks.open{transform:translateX(0)}
+}
+.page-hero{padding:170px 0 70px;position:relative;overflow:hidden;text-align:center}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=1920&q=80') center/cover;opacity:.22}
+.page-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,11,9,.4),rgba(13,11,9,.97))}
+.page-hero .wrap{position:relative;z-index:2}
+.eyebrow{color:var(--gold);letter-spacing:.32em;text-transform:uppercase;font-size:.75rem;margin-bottom:18px}
+.page-hero h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+.page-hero h1 em{color:var(--gold2);font-style:italic}
+.page-hero p{color:#d8ccb6;max-width:640px;margin:20px auto 0}
+section{padding:90px 0}
+.divider{width:64px;height:2px;background:var(--gold);margin:0 0 20px}
+/* CONTACT GRID */
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.c-card{background:var(--card);border:1px solid var(--line);padding:40px 36px;margin-bottom:24px}
+.c-card h3{font-size:1.6rem;color:var(--gold2);margin-bottom:14px}
+.c-card p{color:#cfc3ac;margin-bottom:8px}
+.c-card .big{font-size:1.5rem;font-family:'Cormorant Garamond',serif;color:var(--cream);letter-spacing:.04em}
+.wa-btn{display:inline-flex;align-items:center;gap:12px;background:#22a355;border:1px solid #22a355;color:#fff;font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:15px 30px;margin-top:18px;transition:all .3s}
+.wa-btn:hover{background:transparent;color:#5fd68a;border-color:#5fd68a}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}
+.hours td{padding:11px 4px;border-top:1px solid var(--line);font-size:.95rem}
+.hours td:last-child{text-align:right;color:var(--gold2);letter-spacing:.06em;white-space:nowrap}
+/* FORM */
+.form-card{background:var(--card);border:1px solid var(--line);padding:44px 40px}
+.form-card h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:12px}
+.form-card h2 em{color:var(--gold2);font-style:italic}
+.form-card>p{color:var(--muted);margin-bottom:28px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--cream);padding:13px 16px;font-family:'Inter',sans-serif;font-size:.95rem;outline:none;transition:border-color .25s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{min-height:120px;resize:vertical}
+.field select option{background:#141110}
+@media(max-width:960px){.c-grid{grid-template-columns:1fr}}
+/* FAQ */
+.faq{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.faq-item{border:1px solid var(--line);background:var(--card);margin-bottom:14px}
+.faq-q{width:100%;background:none;border:0;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.35rem;text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q span{color:var(--gold);font-size:1.6rem;flex:0 0 auto}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 26px 24px;color:var(--muted)}
+/* MAP STRIP */
+.map-strip{background:linear-gradient(rgba(13,11,9,.78),rgba(13,11,9,.78)),url('https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=1600&q=80') center/cover;padding:110px 24px;text-align:center}
+.map-strip h2{font-size:clamp(2rem,4.5vw,3.2rem);margin:16px 0 18px}
+.map-strip h2 em{color:var(--gold2);font-style:italic}
+.map-strip p{color:#d8ccb6;max-width:600px;margin:0 auto 30px}
+footer{background:#0a0806;border-top:1px solid var(--line);padding:70px 0 30px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:48px}
+.f-grid h4{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-family:'Inter',sans-serif}
+.f-grid p,.f-grid a{color:var(--muted);font-size:.93rem}
+.f-grid a:hover{color:var(--gold2)}
+.f-grid ul{list-style:none}
+.f-grid li{margin-bottom:10px}
+.f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#6f6350;font-size:.82rem}
+@media(max-width:820px){.f-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">WEST ONE <span>TATTOO</span></a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery &amp; Services</a>
+      <a href="contact.html" class="active">Contact &amp; Booking</a>
+      <a href="https://wa.me/447475255655" target="_blank" rel="noopener" class="btn" style="padding:11px 22px">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Get In Touch</p>
+    <h1>Contact &amp; <em>Booking</em></h1>
+    <p>Walk-ins are welcome every day — or message us ahead for larger pieces, guest artists and guaranteed time slots.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap c-grid">
+    <div>
+      <div class="divider"></div>
+      <h2 class="serif" style="font-size:clamp(2rem,4vw,2.8rem);margin-bottom:28px">Visit the <em style="color:var(--gold2)">Studio</em></h2>
+
+      <div class="c-card">
+        <h3>Find Us</h3>
+        <p class="big">2nd Floor, 51 Oxford Street<br>London W1D 2EF</p>
+        <p style="margin-top:10px">Above the London Food and Wine shop — walk through the shop to the second floor. One minute from Tottenham Court Road station, near Soho.</p>
+        <a class="btn ghost" style="margin-top:18px" href="https://www.google.com/maps/search/?api=1&query=51+Oxford+Street+London+W1D+2EF" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+
+      <div class="c-card">
+        <h3>Message Us</h3>
+        <p class="big">+44 7475 255655</p>
+        <p>WhatsApp is the fastest way to reach us — for bookings, quotes and guest-artist enquiries.</p>
+        <a class="wa-btn" href="https://wa.me/447475255655?text=Hello%20West%20One%20Tattoo%2C%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener">✆ &nbsp;Chat on WhatsApp</a>
+      </div>
+
+      <div class="c-card">
+        <h3>Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday</td><td>11:00 – 20:00</td></tr>
+          <tr><td>Tuesday</td><td>11:00 – 20:00</td></tr>
+          <tr><td>Wednesday</td><td>11:00 – 20:00</td></tr>
+          <tr><td>Thursday</td><td>11:00 – 20:00</td></tr>
+          <tr><td>Friday</td><td>11:00 – 20:00</td></tr>
+          <tr><td>Saturday</td><td>11:00 – 20:00</td></tr>
+          <tr><td>Sunday</td><td>11:00 – 20:00</td></tr>
+        </table>
+        <p style="margin-top:14px;color:var(--muted);font-size:.9rem">Open seven days a week — walk-ins welcome daily.</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="divider"></div>
+      <h2>Request a <em>Booking</em></h2>
+      <p>Fill this in and we'll open WhatsApp with your message ready to send — no account, no waiting.</p>
+      <form id="bookForm">
+        <div class="field">
+          <label for="f-name">Your Name</label>
+          <input id="f-name" type="text" placeholder="Jane Smith" required>
+        </div>
+        <div class="field">
+          <label for="f-style">Tattoo Style</label>
+          <select id="f-style">
+            <option>Fine line / Minimal</option>
+            <option>Japanese</option>
+            <option>Traditional</option>
+            <option>Realistic</option>
+            <option>Abstract / Watercolour</option>
+            <option>Māori / Tribal</option>
+            <option>Cover-up / Blast-over</option>
+            <option>Not sure — need advice</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-place">Placement</label>
+          <input id="f-place" type="text" placeholder="e.g. forearm, ankle, shoulder">
+        </div>
+        <div class="field">
+          <label for="f-when">Preferred Day</label>
+          <select id="f-when">
+            <option>As soon as possible (walk-in)</option>
+            <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+            <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Your Idea</label>
+          <textarea id="f-msg" placeholder="Describe your design — size, references, anything that helps us quote."></textarea>
+        </div>
+        <button class="btn" type="submit" style="width:100%">Send Booking Request via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap" style="max-width:840px">
+    <div class="divider"></div>
+    <h2 class="serif" style="font-size:clamp(2rem,4vw,2.8rem);margin-bottom:36px">Good to <em style="color:var(--gold2)">Know</em></h2>
+    <div class="faq-item">
+      <button class="faq-q">Do I need an appointment, or can I just walk in?<span>+</span></button>
+      <div class="faq-a"><p>Both. Walk-ins are welcome every day for small and medium pieces — come to 51 Oxford Street and we'll draw your design while you wait. Larger pieces and multi-session work need a booking so we can reserve the right artist and time.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How much will my tattoo cost?<span>+</span></button>
+      <div class="faq-a"><p>Our studio minimum is £80. Small walk-in pieces usually run £80–£150; everything else is quoted honestly in the studio before we start. Consultations and design are always free.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you do cover-ups?<span>+</span></button>
+      <div class="faq-a"><p>Yes — cover-ups and blast-overs are one of our specialties. Bring the old piece in (or send a photo on WhatsApp) and we'll show you what's possible.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is there an age limit?<span>+</span></button>
+      <div class="faq-a"><p>Yes — we tattoo clients aged 18 and over only. Please bring photo ID for your first visit.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How do I look after my new tattoo?<span>+</span></button>
+      <div class="faq-a"><p>We wrap every tattoo and walk you through aftercare before you leave: keep it clean, moisturised and out of the sun while it heals. Full written aftercare is provided with every piece.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="map-strip">
+  <p class="eyebrow">2nd Floor · 51 Oxford Street · London W1D 2EF</p>
+  <h2>In the Heart of <em>London</em></h2>
+  <p>Moments from Soho, one minute from Tottenham Court Road station — the easiest studio in central London to find.</p>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=51+Oxford+Street+London+W1D+2EF" target="_blank" rel="noopener">Open in Google Maps</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>West One Tattoo</h4>
+        <p>Walk-in fine line tattoo studio on Oxford Street, London. Custom designs, fair prices, open seven days a week since 2014.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>2nd Floor, 51 Oxford Street</li>
+          <li>London W1D 2EF</li>
+          <li>Open 7 days · 11:00 – 20:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/447475255655" target="_blank" rel="noopener">WhatsApp: +44 7475 255655</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery &amp; Services</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 West One Tattoo · 51 Oxford Street, London</span>
+      <span>Sample website prepared by Abdullah Virk</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('bookForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('f-name').value.trim();
+  var style = document.getElementById('f-style').value;
+  var place = document.getElementById('f-place').value.trim();
+  var when = document.getElementById('f-when').value;
+  var msg = document.getElementById('f-msg').value.trim();
+  var text = 'Hello West One Tattoo, I would like to book a session.'
+    + '\nName: ' + name
+    + '\nStyle: ' + style
+    + (place ? '\nPlacement: ' + place : '')
+    + '\nPreferred day: ' + when
+    + (msg ? '\nIdea: ' + msg : '');
+  window.open('https://wa.me/447475255655?text=' + encodeURIComponent(text), '_blank');
+});
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var a = this.nextElementSibling;
+    var open = a.style.maxHeight && a.style.maxHeight !== '0px';
+    document.querySelectorAll('.faq-a').forEach(function(x){ x.style.maxHeight = '0px'; });
+    document.querySelectorAll('.faq-q span').forEach(function(x){ x.textContent = '+'; });
+    if(!open){ a.style.maxHeight = a.scrollHeight + 'px'; this.querySelector('span').textContent = '–'; }
+  });
+});
+</script>
+
+</body>
+</html>
