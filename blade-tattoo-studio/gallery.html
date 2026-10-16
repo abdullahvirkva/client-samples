@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery &amp; Services | Blades Tattoo Studio, Orpington</title>
+<meta name="description" content="Tattoo gallery and services at Blades Tattoo Studio, Orpington — custom tattoos, fine-line, black & grey, cover-ups and wedding tattoos from £65.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Blades Tattoo Studio — sample site styles */
+:root{
+  --bg:#0b0b0c;
+  --bg2:#121214;
+  --panel:#17171a;
+  --line:#26262b;
+  --text:#f2efe9;
+  --muted:#b9b3a6;
+  --gold:#c9a45c;
+  --gold2:#e8c87e;
+  --red:#a4161a;
+  --maxw:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--gold2);text-decoration:none}
+a:hover{color:#fff}
+h1,h2,h3,.brand{font-family:'Bebas Neue','Arial Narrow',Impact,sans-serif;letter-spacing:.04em;line-height:1.05;font-weight:400}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ---------- header / nav ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,11,12,.93);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.brand{font-size:1.7rem;color:var(--text)}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{
+  color:var(--text);font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:10px 14px;border-radius:4px;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--gold2);background:#1b1b1f}
+.btn{
+  display:inline-block;background:var(--gold);color:#111;font-weight:700;
+  padding:13px 30px;border-radius:3px;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem;
+  border:1px solid var(--gold);transition:all .2s;
+}
+.btn:hover{background:transparent;color:var(--gold2);border-color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:#111}
+.btn.wa{background:#25d366;border-color:#25d366;color:#06210f}
+.btn.wa:hover{background:transparent;color:#25d366}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);
+  font-size:1.4rem;padding:6px 12px;border-radius:4px;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:86vh;display:flex;align-items:center;
+  background-size:cover;background-position:center;
+}
+.hero::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(5,5,6,.94) 20%,rgba(5,5,6,.55) 55%,rgba(5,5,6,.25) 100%)}
+.hero-content{position:relative;z-index:1;max-width:640px;padding:90px 0}
+.kicker{color:var(--gold);letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(3rem,7.5vw,5.4rem);margin-bottom:18px;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{color:#ddd8cc;font-size:1.12rem;max-width:520px;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.page-hero{position:relative;padding:84px 0 70px;background-size:cover;background-position:center;text-align:center}
+.page-hero::before{content:"";position:absolute;inset:0;background:rgba(5,5,6,.78)}
+.page-hero .wrap{position:relative;z-index:1}
+.page-hero h1{font-size:clamp(2.6rem,6vw,4.2rem);text-transform:uppercase}
+.page-hero h1 em{font-style:normal;color:var(--gold)}
+.page-hero p{color:var(--muted);max-width:620px;margin:12px auto 0}
+
+/* ---------- sections ---------- */
+section{padding:78px 0}
+.section-head{max-width:700px;margin-bottom:42px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+h2{font-size:clamp(2rem,4.4vw,3rem);text-transform:uppercase;margin-bottom:12px}
+h2 em{font-style:normal;color:var(--gold)}
+.section-head p{color:var(--muted)}
+.alt{background:var(--bg2)}
+.band{background:linear-gradient(120deg,#151310,#1f1a10);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* services cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .thumb{height:210px;background-size:cover;background-position:center}
+.card .body{padding:24px}
+.card h3{font-size:1.5rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em}
+.card h3 em{font-style:normal;color:var(--gold)}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.card .price{color:var(--gold2);font-weight:700;font-size:.95rem}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.split img{border-radius:8px;border:1px solid var(--line)}
+.checklist{list-style:none;margin-top:18px}
+.checklist li{padding:9px 0 9px 34px;position:relative;color:#ddd8cc}
+.checklist li::before{content:"✦";color:var(--gold);position:absolute;left:4px;top:9px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:30px 26px;position:relative}
+.step .num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--gold);line-height:1}
+.step h3{font-size:1.35rem;margin:10px 0 8px;text-transform:uppercase}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery figure{position:relative;overflow:hidden;border-radius:6px;border:1px solid var(--line);margin:0}
+.gallery img{width:100%;height:340px;object-fit:cover;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.85rem;letter-spacing:.06em;
+  text-transform:uppercase;color:#fff}
+
+/* service rows */
+.service-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+.service-row:last-child{margin-bottom:0}
+.service-row.flip .simg{order:2}
+.service-row .simg img{border-radius:8px;border:1px solid var(--line);height:380px;width:100%;object-fit:cover}
+.service-row h3{font-size:2rem;text-transform:uppercase;margin-bottom:10px}
+.service-row h3 em{font-style:normal;color:var(--gold)}
+.service-row p{color:var(--muted);margin-bottom:14px}
+
+/* cta band */
+.cta-band{text-align:center;padding:80px 0}
+.cta-band h2{margin-bottom:14px}
+.cta-band p{color:var(--muted);max-width:560px;margin:0 auto 28px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.info-card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:28px;margin-bottom:18px}
+.info-card h3{font-size:1.4rem;text-transform:uppercase;margin-bottom:10px;color:var(--gold2)}
+.info-card p{color:var(--muted);margin-bottom:6px}
+.info-card .big{font-size:1.15rem;color:var(--text)}
+.hours-table{width:100%;border-collapse:collapse;margin-top:6px}
+.hours-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--muted)}
+.hours-table td:last-child{text-align:right;color:var(--text)}
+.form-card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:30px}
+.form-card h3{font-size:1.6rem;text-transform:uppercase;margin-bottom:6px}
+.form-card>p{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+label{display:block;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+input,select,textarea{
+  width:100%;background:#0e0e10;border:1px solid var(--line);border-radius:4px;
+  color:var(--text);padding:12px 14px;font-size:1rem;font-family:inherit;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:110px;resize:vertical}
+.map-wrap{margin-top:26px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.map-wrap iframe{width:100%;height:380px;border:0;display:block}
+.faq{max-width:780px;margin:0 auto}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:6px;margin-bottom:12px;padding:18px 22px}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.02rem;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--gold);font-size:1.3rem}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--muted);margin-top:10px;font-size:.95rem}
+
+/* footer */
+footer{background:#08080a;border-top:1px solid var(--line);padding:56px 0 0;margin-top:0}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;padding-bottom:40px}
+.foot-grid h4{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.06em;color:var(--gold2);margin-bottom:12px;text-transform:uppercase}
+.foot-grid p,.foot-grid li{color:var(--muted);font-size:.93rem;list-style:none}
+.foot-grid li{padding:4px 0}
+.foot-bottom{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#7d766a;font-size:.84rem}
+
+/* responsive */
+@media(max-width:900px){
+  .cards,.steps{grid-template-columns:1fr 1fr}
+  .split,.service-row,.contact-grid{grid-template-columns:1fr;gap:30px}
+  .service-row.flip .simg{order:0}
+  .gallery{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .menu-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#0d0d0f;
+    flex-direction:column;align-items:stretch;padding:10px 20px 20px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:12px 6px}
+  .cards,.steps,.gallery{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .gallery img{height:300px}
+  .hero-content{padding:70px 0}
+  .foot-bottom{flex-direction:column}
+}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">BLADES <span>TATTOO</span></a>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <ul class="nav-links" id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery &amp; Services</a></li>
+      <li><a href="contact.html">Contact &amp; Booking</a></li>
+      <li><a class="btn" href="contact.html" style="padding:10px 20px">Book Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero" style="background-image:url('https://images.pexels.com/photos/6593470/pexels-photo-6593470.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+    <div class="wrap">
+      <p class="kicker">Gallery &amp; services</p>
+      <h1>The <em>work</em> speaks</h1>
+      <p>A look at the styles we tattoo every week at the Orpington studio — and what each service involves.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL -->
+  <section>
+    <div class="wrap">
+      <div class="service-row">
+        <div class="simg"><img src="https://images.pexels.com/photos/29212052/pexels-photo-29212052/free-photo-of-professional-tattoo-artist-creating-arm-tattoo.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Artist working a colourful tattoo on a client's arm" loading="lazy"></div>
+        <div>
+          <h3>Custom <em>Tattoos</em></h3>
+          <p>No two clients walk out with the same tattoo. Whether it's your first small piece or a full sleeve, we design around your ideas, your body and your budget — then refine the artwork with you before a single needle touches skin.</p>
+          <a class="btn ghost" href="contact.html">Start Your Design</a>
+        </div>
+      </div>
+
+      <div class="service-row flip">
+        <div class="simg"><img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1000&q=80" alt="Fine-line floral tattoo with dragon detail on shoulder" loading="lazy"></div>
+        <div>
+          <h3>Fine-Line <em>Tattoos</em></h3>
+          <p>Delicate, precise linework for florals, minimal designs, script and small meaningful pieces. A steady hand and the right needle make the difference — fine-line work done badly blows out fast; ours heals crisp.</p>
+          <a class="btn ghost" href="contact.html">Book a Consultation</a>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="simg"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1000&q=80" alt="Large black and grey Japanese style back tattoo" loading="lazy"></div>
+        <div>
+          <h3>Black &amp; <em>Grey</em></h3>
+          <p>Rich blacks, smooth shading and bold contrast — the style that ages best. From chest pieces and sleeves to dramatic full back work, black &amp; grey is our bread and butter.</p>
+          <a class="btn ghost" href="contact.html">Discuss Your Piece</a>
+        </div>
+      </div>
+
+      <div class="service-row flip">
+        <div class="simg"><img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1000&q=80" alt="Tattoo artist's gloved hands working on a forearm sleeve" loading="lazy"></div>
+        <div>
+          <h3>Tattoo <em>Cover-Ups</em></h3>
+          <p>Got ink you no longer love? A good cover-up isn't a patch job — it's a redesign. We plan around the existing tattoo's darkness and shape, then build something bold enough to own it and fresh enough to be proud of.</p>
+          <a class="btn ghost" href="contact.html">Ask About Cover-Ups</a>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="simg"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=1000&q=80" alt="Fine-line script and leaf tattoos on a forearm" loading="lazy"></div>
+        <div>
+          <h3>Wedding <em>Tattoos</em></h3>
+          <p>Make your wedding day even more memorable. Matching couple tattoos, wedding dates, initials, fine-line designs and small bespoke artwork for brides, grooms, guests and whole wedding parties. Book early — wedding sessions are popular year-round.</p>
+          <p style="color:var(--gold2);font-weight:700">Wedding tattoos from £65</p>
+          <a class="btn ghost" href="contact.html">Plan Wedding Ink</a>
+        </div>
+      </div>
+
+      <div class="service-row flip">
+        <div class="simg"><img src="https://images.pexels.com/photos/6593487/pexels-photo-6593487.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Hand holding a professional tattoo machine" loading="lazy"></div>
+        <div>
+          <h3>Free <em>Consultations</em></h3>
+          <p>Never sure? Come in and talk it through. We'll advise on design, placement, sizing and honest pricing — no pressure, no obligation. A good tattoo starts with a good conversation.</p>
+          <a class="btn ghost" href="contact.html">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker">Recent work</p>
+        <h2>The <em>gallery</em></h2>
+        <p>A sample of the styles coming out of the studio. Every piece is original work, designed for the person wearing it.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80" alt="Large black and grey back piece" loading="lazy">
+          <figcaption>Black &amp; grey · back piece</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.pexels.com/photos/29212052/pexels-photo-29212052/free-photo-of-professional-tattoo-artist-creating-arm-tattoo.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Colour tattoo being worked on an arm" loading="lazy">
+          <figcaption>Colour work · in progress</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80" alt="Fine-line floral shoulder tattoo" loading="lazy">
+          <figcaption>Fine-line · shoulder piece</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=800&q=80" alt="Artist tattooing a forearm sleeve" loading="lazy">
+          <figcaption>Sleeve work · session</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=800&q=80" alt="Fine-line script and leaf forearm tattoos" loading="lazy">
+          <figcaption>Fine-line · script &amp; botanical</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.pexels.com/photos/6593470/pexels-photo-6593470.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of tattoo machine on skin" loading="lazy">
+          <figcaption>Detail work · close-up</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="band cta-band">
+    <div class="wrap">
+      <h2>Like what <em>you see?</em></h2>
+      <p>Bring your idea to the studio and let's turn it into something permanent. Free consultations, honest pricing.</p>
+      <a class="btn wa" href="https://wa.me/447956291350?text=Hi%20Blades%20Tattoo%20Studio%2C%20I%20saw%20your%20gallery%20and%20I%27d%20like%20to%20book." target="_blank" rel="noopener">WhatsApp +44 7956 291350</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h4>Blades Tattoo Studio</h4>
+      <p>Professional tattoo studio in Orpington offering custom tattoos, fine-line tattoos, black and grey work, cover-ups and consultations.</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li>7 Carlton Parade</li>
+        <li>Orpington, Greater London BR6 0JB</li>
+        <li>WhatsApp: +44 7956 291350</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul>
+        <li>Mon – Thu: 10:00 – 18:00</li>
+        <li>Walk-ins &amp; appointments</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Blades Tattoo Studio · Orpington, Greater London</span>
+    <span>Sample website prepared by Abdullah Virk</span>
+  </div>
+</footer>
+
+</body>
+</html>
