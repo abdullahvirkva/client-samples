@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment — Celebrity Skin Custom Tattoos, Camden London</title>
+<meta name="description" content="Book your tattoo at Celebrity Skin Camden. Send your idea, reference pictures, body area and ideal dates via WhatsApp or email.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Celebrity Skin Custom Tattoos — sample site by Abdullah Virk */
+:root{
+  --bg:#0b0a09; --bg2:#141210; --card:#1a1714; --line:#2a241e;
+  --gold:#c9a24b; --gold2:#e8c876; --cream:#f2ead9; --muted:#a89e8c;
+  --red:#8f2d2d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,10,9,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;color:var(--gold);font-size:20px}
+.brand .name{font-family:'Playfair Display',serif;font-size:19px;letter-spacing:.5px}
+.brand .name small{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+.links{display:flex;gap:28px;font-size:14px;letter-spacing:1.5px;text-transform:uppercase}
+.links a{color:var(--muted);transition:.25s}
+.links a:hover,.links a.active{color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#141005;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;padding:14px 30px;border-radius:2px;transition:.25s;border:1px solid var(--gold)}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:#141005}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;padding:140px 0 90px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url('images/hero.jpg') center/cover;filter:grayscale(35%) brightness(.5)}
+.hero .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.55),rgba(11,10,9,.15) 45%,rgba(11,10,9,.92))}
+.hero .inner{position:relative;z-index:2}
+.kicker{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:18px}
+.hero h1{font-size:clamp(44px,7vw,88px);margin-bottom:20px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p.lead{max-width:620px;color:#d9cfbb;font-size:18px;margin-bottom:34px}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.badge{border:1px solid var(--line);background:rgba(20,18,16,.7);padding:9px 16px;border-radius:30px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold2)}
+
+/* sections */
+section{padding:96px 0}
+.sec-head{max-width:720px;margin-bottom:54px}
+.sec-head h2{font-size:clamp(32px,4vw,52px);margin:14px 0 16px}
+.sec-head h2 em{color:var(--gold);font-style:normal}
+.sec-head p{color:var(--muted);font-size:17px}
+.alt{background:var(--bg2)}
+
+/* about grid */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid img{border-radius:4px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.about-grid h3{font-size:26px;margin-bottom:14px;color:var(--gold2)}
+.about-grid p{color:#cfc4ae;margin-bottom:16px}
+.tick{list-style:none;margin-top:8px}
+.tick li{padding:10px 0 10px 34px;position:relative;color:#d9cfbb}
+.tick li::before{content:'✦';position:absolute;left:0;color:var(--gold)}
+
+/* styles */
+.styles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.style-card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:34px 26px;transition:.3s}
+.style-card:hover{border-color:var(--gold);transform:translateY(-6px)}
+.style-card h3{font-size:22px;color:var(--gold2);margin-bottom:10px}
+.style-card p{color:var(--muted);font-size:15px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal figure{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:3/4;background:#000}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s;filter:saturate(.9)}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2)}
+
+/* info cards */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:30px 26px}
+.info-card h3{color:var(--gold);font-size:15px;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;font-family:'Inter',sans-serif}
+.info-card p,.info-card li{color:#cfc4ae;font-size:15px}
+.info-card ul{list-style:none}
+.info-card li{padding:5px 0;border-bottom:1px dashed var(--line)}
+.info-card li:last-child{border:none}
+.info-card a.tel{color:var(--gold2);font-weight:700;font-size:19px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;counter-reset:st}
+.step{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:30px 24px;position:relative}
+.step::before{counter-increment:st;content:counter(st,decimal-leading-zero);font-family:'Playfair Display',serif;font-size:44px;color:var(--gold);opacity:.85}
+.step h3{margin:12px 0 8px;font-size:20px}
+.step p{color:var(--muted);font-size:15px}
+
+/* faq */
+.faq{max-width:820px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:4px;margin-bottom:12px;padding:20px 24px}
+.faq summary{cursor:pointer;font-weight:600;font-size:17px;color:var(--cream);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';float:right;color:var(--gold);font-size:22px}
+.faq details[open] summary::after{content:'–'}
+.faq p{color:var(--muted);margin-top:12px;font-size:15px}
+
+/* cta band */
+.band{background:linear-gradient(120deg,#171310,#241b10);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.band h2{font-size:clamp(30px,4vw,50px);margin-bottom:16px}
+.band h2 em{color:var(--gold);font-style:normal}
+.band p{color:var(--muted);margin-bottom:30px}
+
+/* footer */
+footer{background:#080706;border-top:1px solid var(--line);padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-grid h4{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:16px}
+.foot-grid p,.foot-grid li{color:var(--muted);font-size:14px;list-style:none}
+.foot-grid li{padding:4px 0}
+.foot-grid a:hover{color:var(--gold)}
+.copy{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#6f665a;font-size:13px}
+.copy .credit{color:#8a7f6c}
+
+@media(max-width:860px){
+  .links{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr}
+  section{padding:64px 0}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="mark">C</span>
+      <span class="name">Celebrity Skin<small>Custom Tattoos</small></span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Work &amp; Styles</a>
+      <a href="booking.html" class="active">Book Now</a>
+    </nav>
+    <a class="btn" href="booking.html">Get an Appointment</a>
+  </div>
+</header>
+
+<section style="padding-top:150px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Get an Appointment</div>
+      <h2>Booking <em>made simple</em></h2>
+      <p>The best way to book is to message us with your idea. Include a short description of your tattoo, some reference pictures, the body area, and your preferred dates or days of the week.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Say hello</h3><p>Message us on WhatsApp or email with your tattoo idea and reference pictures.</p></div>
+      <div class="step"><h3>We design</h3><p>Once your non-refundable deposit is made, your artist starts your one-of-one design.</p></div>
+      <div class="step"><h3>Get inked</h3><p>Your design is revealed on the day. Sit back — you're in expert hands.</p></div>
+      <div class="step"><h3>Heal happy</h3><p>Your artist walks you through aftercare. Free touch-ups within 3 months.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Visit Us</div>
+      <h2>Find the <em>studio</em></h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Address</h3>
+        <p>Unit 6, 190 Camden High Street<br>London NW1 8QP, UK</p>
+        <p style="margin-top:10px">1st floor above Leon Restaurant —<br>1 minute's walk from Camden Town Underground station. Dial 6 on the buzzer and we'll let you in.</p>
+      </div>
+      <div class="info-card">
+        <h3>Hours</h3>
+        <ul>
+          <li>Monday — 11:30 – 19:00</li>
+          <li>Tuesday — 11:30 – 19:00</li>
+          <li>Wednesday — 11:30 – 19:00</li>
+          <li>Thursday — 11:30 – 19:00</li>
+          <li>Friday — 11:30 – 19:00</li>
+          <li>Saturday — 11:30 – 19:00</li>
+          <li>Sunday — Closed</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Contact</h3>
+        <p><a class="tel" href="https://wa.me/447999980079">WhatsApp: +44 7999 980079</a></p>
+        <p style="margin-top:10px"><a href="mailto:celebrityskintattoos@gmail.com" style="color:var(--gold2)">celebrityskintattoos@gmail.com</a></p>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">Fastest reply: WhatsApp during opening hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Good to Know</div>
+      <h2>Before you <em>book</em></h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>How old do I have to be?</summary>
+        <p>You must be 18 or older — it's illegal in the UK to tattoo under-18s. Please bring a valid ID with you.</p>
+      </details>
+      <details>
+        <summary>How are tattoos priced?</summary>
+        <p>Prices vary depending on the final design, style, size and body area. Message us your idea for an honest quote.</p>
+      </details>
+      <details>
+        <summary>Will I see my design before the appointment?</summary>
+        <p>Every artist works differently — your design begins once a non-refundable deposit is made, and is typically ready to view on the day of your appointment.</p>
+      </details>
+      <details>
+        <summary>Can I reschedule?</summary>
+        <p>Yes — once, without losing your deposit, as long as it's at least 7 days before your appointment and within 6 months of the original date.</p>
+      </details>
+      <details>
+        <summary>Do you offer free touch-ups?</summary>
+        <p>Yes, for tattoos done at the studio, booked within 3 months of your original date. (Fingers, hands, feet, elbows, head and a few other areas excluded.)</p>
+      </details>
+      <details>
+        <summary>Do you do piercings?</summary>
+        <p>No — but our friends at Gold Standard Piercings on the same floor come highly recommended.</p>
+      </details>
+      <details>
+        <summary>What should I do before my appointment?</summary>
+        <p>Get a good night's rest, stay hydrated, and don't come on an empty stomach. Don't shave the area — trimming with clippers is fine.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <section>
+    <div class="wrap">
+      <h2>Ready when <em>you are</em></h2>
+      <p>Message us today — consultations are free and the chair is waiting.</p>
+      <a class="btn" href="https://wa.me/447999980079">WhatsApp the Studio</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Celebrity Skin Custom Tattoos</h4>
+        <p>Unit 6, 190 Camden High St, London NW1 8QP<br>
+        1st floor above Leon Restaurant — 1 min from Camden Town station.<br>
+        A 100% vegan &amp; eco-friendly, queer-owned safe space.</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon – Sat: 11:30 – 19:00</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/447999980079">WhatsApp: +44 7999 980079</a></li>
+          <li><a href="mailto:celebrityskintattoos@gmail.com">celebrityskintattoos@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Celebrity Skin Custom Tattoos. All rights reserved. 18+ only.</span>
+      <span class="credit">Sample website prepared by Abdullah Virk</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
