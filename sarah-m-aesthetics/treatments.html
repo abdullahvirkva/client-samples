@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treatments | Sarah M Aesthetic Clinic, Brentford London</title>
+<meta name="description" content="Explore advanced non-surgical treatments at Sarah M Aesthetic Clinic: HydraFacial, HIFU, skin boosters, microneedling, injectables, fat reduction and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#faf7f1;--cream:#f4ede2;--blush:#efdfd2;--gold:#b3874a;--gold-d:#96702f;--ink:#2c2620;--muted:#7d7264;--line:#e5d9c8;--white:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.25}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.7rem;letter-spacing:.06em}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.42em;color:var(--gold);margin-top:2px}
+.nav-links{display:flex;gap:34px;align-items:center;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a:hover{color:var(--gold-d)}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 30px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;border-radius:2px;transition:.25s;border:1px solid var(--gold)}
+.btn:hover{background:var(--gold-d);border-color:var(--gold-d);transform:translateY(-1px)}
+.page-hero{background:linear-gradient(rgba(35,28,20,.62),rgba(35,28,20,.62)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1800&q=80') center/cover;color:#fff;text-align:center;padding:110px 0}
+.page-hero h1{font-size:clamp(2.4rem,4.6vw,3.6rem)}
+.page-hero p{opacity:.9;max-width:600px;margin:14px auto 0;font-weight:300}
+.eyebrow{font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:#e8cf9f;margin-bottom:18px}
+section{padding:80px 0}
+.treat{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:44px 0;border-bottom:1px solid var(--line)}
+.treat:last-child{border-bottom:none}
+.treat.flip .t-img{order:2}
+.t-img img{border-radius:4px;box-shadow:0 24px 50px -20px rgba(90,70,40,.35);height:340px;width:100%;object-fit:cover}
+.t-body .tag{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-d);margin-bottom:10px}
+.t-body h2{font-size:2rem;margin-bottom:14px}
+.t-body p{color:var(--muted);margin-bottom:14px}
+.t-body ul{list-style:none;margin:18px 0}
+.t-body li{padding:8px 0 8px 30px;position:relative;color:var(--muted);font-size:.95rem}
+.t-body li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:.65rem;top:14px}
+.note{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:36px;text-align:center;margin-top:20px}
+.note h3{font-size:1.6rem;margin-bottom:10px}
+.note p{color:var(--muted);max-width:640px;margin:0 auto 22px}
+.cta-band{background:var(--ink);color:#fff;text-align:center;padding:70px 0}
+.cta-band h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:14px}
+.cta-band p{opacity:.85;max-width:560px;margin:0 auto 28px;font-weight:300}
+.btn-light{background:#fff;color:var(--ink);border-color:#fff}
+.btn-light:hover{background:var(--blush);border-color:var(--blush)}
+footer{background:#211c16;color:#cfc2ab;padding:56px 0 0;font-size:.94rem}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;margin-bottom:40px}
+.foot-grid h4{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.25rem;margin-bottom:14px}
+.foot-grid p,.foot-grid a{color:#b9ac93}
+.foot-grid a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid #453c30;padding:18px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem;color:#8f836d}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.28)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media(max-width:900px){.treat{grid-template-columns:1fr;gap:28px}.treat.flip .t-img{order:0}.nav-links{display:none}.foot-grid{grid-template-columns:1fr}section{padding:56px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">Sarah M<small>AESTHETIC CLINIC</small></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">Book on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Advanced Non-Surgical Aesthetics</div>
+    <h1>Our <em style="color:#f0dcae">Treatments</em></h1>
+    <p>A comprehensive menu of face, eye and body treatments — every plan bespoke, every result natural.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+
+    <div class="treat">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="HydraFacial treatment"></div>
+      <div class="t-body">
+        <div class="tag">Skin Health</div>
+        <h2>HydraFacial</h2>
+        <p>The ultimate glow facial — a multi-step ritual that deeply cleanses, gently exfoliates and floods the skin with intense hydration.</p>
+        <ul><li>Instant radiance with zero downtime</li><li>Refines pores and evens tone</li><li>Perfect before special occasions</li></ul>
+      </div>
+    </div>
+
+    <div class="treat flip">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=900&q=80" alt="HIFU non-surgical facelift"></div>
+      <div class="t-body">
+        <div class="tag">Lifting &amp; Firming</div>
+        <h2>HIFU Face Lift</h2>
+        <p>High-intensity focused ultrasound that tightens and lifts sagging skin — a non-surgical answer to firmer contours.</p>
+        <ul><li>Lifts cheeks, jawline and brow</li><li>Stimulates deep collagen renewal</li><li>Results that build over weeks</li></ul>
+      </div>
+    </div>
+
+    <div class="treat">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&fit=crop&w=900&q=80" alt="Skin boosters and Profhilo"></div>
+      <div class="t-body">
+        <div class="tag">Hydration Therapy</div>
+        <h2>Skin Boosters &amp; Profhilo</h2>
+        <p>Injectable hydration that remodels the skin from within — improving elasticity, smoothness and luminosity.</p>
+        <ul><li>Deep, long-lasting hydration</li><li>Softens fine lines and crepiness</li><li>Natural, undetectable finish</li></ul>
+      </div>
+    </div>
+
+    <div class="treat flip">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=900&q=80" alt="Microneedling"></div>
+      <div class="t-body">
+        <div class="tag">Skin Renewal</div>
+        <h2>Microneedling</h2>
+        <p>Precision micro-channels awaken your skin's own repair response — softening acne scars and refining texture.</p>
+        <ul><li>Reduces acne scarring</li><li>Minimises pores and fine lines</li><li>Boosts collagen naturally</li></ul>
+      </div>
+    </div>
+
+    <div class="treat">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=900&q=80" alt="Fat reduction and body contouring"></div>
+      <div class="t-body">
+        <div class="tag">Body Contouring</div>
+        <h2>Fat Reduction</h2>
+        <p>Targeted cryo and contouring technologies that sculpt stubborn areas diet and exercise can't reach.</p>
+        <ul><li>Non-invasive, no downtime</li><li>Targets stubborn pockets</li><li>Gradual, natural-looking change</li></ul>
+      </div>
+    </div>
+
+    <div class="treat flip">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Anti-ageing injectables"></div>
+      <div class="t-body">
+        <div class="tag">Anti-Ageing</div>
+        <h2>Anti-Wrinkle Injectables</h2>
+        <p>Expertly placed, subtle treatments that soften expression lines and restore a rested, balanced look.</p>
+        <ul><li>Softens frown and forehead lines</li><li>Conservative, natural dosing</li><li>Administered by medically trained practitioners</li></ul>
+      </div>
+    </div>
+
+    <div class="treat">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Pigmentation and skin correction"></div>
+      <div class="t-body">
+        <div class="tag">Skin Correction</div>
+        <h2>Pigmentation Removal</h2>
+        <p>Advanced therapies that fade sun spots, melasma and uneven tone for a clearer, brighter complexion.</p>
+        <ul><li>Targets sun damage and melasma</li><li>Evens overall skin tone</li><li>Personalised treatment course</li></ul>
+      </div>
+    </div>
+
+    <div class="treat flip">
+      <div class="t-img"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=80" alt="Wellness therapies"></div>
+      <div class="t-body">
+        <div class="tag">Wellness</div>
+        <h2>Vitamin B12 &amp; Wellness</h2>
+        <p>Revitalising B12 injections and holistic wellness support to restore energy from the inside out.</p>
+        <ul><li>Boosts energy and vitality</li><li>Supports overall wellbeing</li><li>Quick, comfortable treatment</li></ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <h3 class="serif">Not sure where to start?</h3>
+      <p>Book a complimentary phone consultation — we'll assess your needs and design a tailored plan. A £20 booking fee applies, fully redeemable against your appointment.</p>
+      <a class="btn" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic%2C%20I%27d%20like%20a%20free%20consultation%20to%20discuss%20treatments." target="_blank" rel="noopener">Ask on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2 class="serif">Ready for your <em style="color:#f0dcae">transformation?</em></h2>
+    <p>Message us today — consultations are complimentary and every journey begins with a conversation.</p>
+    <a class="btn btn-light" href="contact.html">Book Your Visit</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h4>Sarah M Aesthetic Clinic</h4>
+      <p>981 Great West Road<br>London TW8 9DN<br>United Kingdom</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Phone: <a href="tel:+442034174350">020 3417 4350</a><br>
+      Mobile / WhatsApp: <a href="https://wa.me/447733801122" target="_blank" rel="noopener">07733 801122</a><br>
+      Email: <a href="mailto:hello@sarahmaesthetics.co.uk">hello@sarahmaesthetics.co.uk</a></p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="index.html">Home</a><br><a href="treatments.html">Treatments</a><br><a href="contact.html">Contact &amp; Booking</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom wrap">
+    <span>© 2026 Sarah M Aesthetic Clinic. All rights reserved.</span>
+    <span>Sample website prepared by Abdullah Virk</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.5 1.2 1.2-4.4-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5 9.6 10.4 5 16 5s11 4.6 11 10.8-4.9 9-10 9zm6-6.8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-.9-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.2-.6l.5-.6c.2-.2.2-.4.1-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8 1.9.9 2.7.9 3.6.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.7-.4z"/></svg>
+</a>
+
+</body>
+</html>
