@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abdullah Virk - Web Design Portfolio | WebCraft Pro</title>
+<meta name="description" content="Portfolio of professional business websites designed by Abdullah Virk, WebCraft Pro studio.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f7f5f2;color:#222}
+header{background:linear-gradient(135deg,#0e7c5b,#0a5c44);color:#fff;padding:56px 20px;text-align:center}
+header h1{font-size:2.4rem;margin-bottom:8px}
+header p{opacity:.92;max-width:640px;margin:0 auto;font-size:1.05rem}
+.cta{display:inline-block;margin-top:18px;background:#fff;color:#0e7c5b;padding:12px 28px;border-radius:30px;text-decoration:none;font-weight:700}
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:22px 16px}
+.filters button{border:1px solid #0e7c5b;background:#fff;color:#0e7c5b;padding:8px 18px;border-radius:20px;cursor:pointer;font-size:.9rem}
+.filters button.on{background:#0e7c5b;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:0 22px 40px;max-width:1200px;margin:0 auto}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;color:#222;transition:transform .15s}
+.card:hover{transform:translateY(-4px)}
+.thumb{height:150px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:800;text-shadow:0 1px 4px rgba(0,0,0,.35);letter-spacing:.5px}
+.card .meta{padding:14px 16px}
+.card .meta h3{font-size:1.05rem;margin-bottom:4px}
+.card .meta span{font-size:.82rem;color:#0e7c5b;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+footer{background:#222;color:#bbb;text-align:center;padding:26px 16px;font-size:.9rem}
+footer a{color:#fff}
+</style></head><body>
+<header>
+<h1>Abdullah Virk</h1>
+<p>WebCraft Pro studio - I design modern, mobile-friendly, photo-led websites for local businesses. Browse real sample sites below.</p>
+<a class="cta" href="mailto:abdullah146834@gmail.com">Get a website for your business</a>
+</header>
+<div class="filters" id="filters"></div>
+<div class="grid" id="grid"></div>
+<footer>Portfolio of <b>Abdullah Virk</b> - WebCraft Pro &middot; <a href="mailto:abdullah146834@gmail.com">abdullah146834@gmail.com</a> &middot; <a href="https://github.com/abdullahvirkva">GitHub</a></footer>
+<script>
+var CATS = {"barber": "Barbershops", "tattoo": "Tattoo Studios", "auto": "Auto Repair", "realestate": "Real Estate", "salon": "Salons & Beauty", "dental": "Dental Clinics", "business": "Business"};
+var DATA = [["1st Ade Mobile Mechanic", "1stade-mobile-mechanic", "auto"], ["Auto Tech Mobile Mechanic", "auto-tech-mobile-mechanic", "auto"], ["Barber JQ", "barber-jq", "barber"], ["Barberia Gomez", "barberia-gomez", "barber"], ["Barbers Den Hairdresser", "barbers-den-hairdresser", "barber"], ["Billy and Bo", "billy-and-bo", "salon"], ["Blade Tattoo Studio", "blade-tattoo-studio", "tattoo"], ["Celebrity Skin Tattoo", "celebrity-skin-tattoo", "tattoo"], ["Cheverton Car Repairs", "cheverton-car-repairs", "auto"], ["Chrisalon", "chrisalon", "salon"], ["Da Zhong Barber Shop", "da-zhong-barber-shop", "barber"], ["Danny Buys Houses", "danny-buys-houses", "realestate"], ["The Exclusive Cuts", "e-the-exclusive-cuts", "barber"], ["Emerald House Buyers", "emerald-house-buyers", "realestate"], ["Fausto Auto Repair", "fausto-auto-repair", "auto"], ["Five Star Barbers", "five-star-barbers", "barber"], ["Flippin Reality Homes", "flippin-reality-homes", "realestate"], ["Hair Lounge", "hair-lounge", "salon"], ["HBSB Holdings", "hbsb-holdings", "business"], ["Hector's Barber Shop", "hectors-barber-shop", "barber"], ["Houston Home Relief Group", "houston-home-relief-group", "realestate"], ["JCA Freedom Homes", "jca-freedom-homes", "realestate"], ["Lux Beauty", "lux-beauty", "salon"], ["Mia Finest Barbershop", "mia-finest-barbershop", "barber"], ["Mike's Barber Shop", "mikes-barber-shop", "barber"], ["No.3 Gentleman's", "no3-gentlemans", "barber"], ["NTX Home Buyers", "ntx-home-buyers", "realestate"], ["Pettura Dental", "pettura-dental", "dental"], ["Salon Vive", "salon-vive", "salon"], ["Sell My House Fast Guys", "sell-my-house-fast-guys", "realestate"], ["Shad Barber", "shad-barber", "barber"], ["ShiftPro Mobile Mechanic", "shiftpro-mobile-mechanic", "auto"], ["Studio 51 Ink", "studio-51-ink", "tattoo"], ["Texas All Cash Home Buyers", "texas-all-cash-home-buyers", "realestate"], ["We Buy Houses Arizona", "we-buy-houses-arizona", "realestate"], ["West One Tattoo", "west-one-tattoo", "tattoo"]];
+var hues = {barber:210,tattoo:280,auto:20,realestate:150,salon:320,dental:190,business:230};
+var grid=document.getElementById('grid'), flt=document.getElementById('filters'), cur='all';
+function drawFilters(){
+  var cats=['all']; DATA.forEach(function(d){ if(cats.indexOf(d[2])<0) cats.push(d[2]); });
+  flt.innerHTML='';
+  cats.forEach(function(c){
+    var b=document.createElement('button');
+    b.textContent = c==='all' ? 'All' : (CATS[c]||c);
+    if(c===cur) b.className='on';
+    b.onclick=function(){cur=c;drawFilters();drawGrid();};
+    flt.appendChild(b);
+  });
+}
+function drawGrid(){
+  grid.innerHTML='';
+  DATA.filter(function(d){return cur==='all'||d[2]===cur;}).forEach(function(d){
+    var a=document.createElement('a'); a.className='card'; a.href=d[1]+'/';
+    var t=document.createElement('div'); t.className='thumb';
+    t.style.background='linear-gradient(135deg,hsl('+hues[d[2]]+',45%,42%),hsl('+hues[d[2]]+',55%,28%))';
+    t.textContent=d[0];
+    var m=document.createElement('div'); m.className='meta';
+    m.innerHTML='<h3>'+d[0]+'</h3><span>'+(CATS[d[2]]||d[2])+'</span>';
+    a.appendChild(t); a.appendChild(m); grid.appendChild(a);
+  });
+}
+drawFilters(); drawGrid();
+</script></body></html>
