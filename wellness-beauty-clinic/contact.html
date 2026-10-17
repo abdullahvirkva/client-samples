@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Booking | Wellness Beauty Clinic, Stoke Newington</title>
+<meta name="description" content="Book your appointment at Wellness Beauty Clinic, 52 Stoke Newington High St, London. WhatsApp +44 7577 568786. Open Tue–Sat 9:30–7:30, Sun 10–5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf6f1;--rose:#b76e79;--rose-d:#96525e;--char:#26221f;--gold:#c9a227;--muted:#7a6f68;--line:#eadfd4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--char);background:var(--cream);line-height:1.7}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.25}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,241,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;text-decoration:none;color:inherit}
+.brand span{color:var(--rose)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-size:.95rem;font-weight:500;color:inherit}
+.links a:hover{color:var(--rose)}
+.btn{display:inline-block;background:var(--rose);color:#fff!important;text-decoration:none;padding:12px 26px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.25s;border:none;cursor:pointer}
+.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.gold{background:var(--gold)}.btn.gold:hover{background:#a9881f}
+.page-hero{background:var(--char);color:#f3ead9;padding:70px 0;text-align:center}
+.page-hero h1{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:10px}
+.page-hero p{opacity:.8;max-width:600px;margin:0 auto}
+section{padding:70px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.info-card{background:#fff;border-radius:16px;padding:34px;box-shadow:0 14px 40px rgba(38,34,31,.08);margin-bottom:26px}
+.info-card h3{margin-bottom:14px;font-size:1.3rem}
+.info-card p{color:var(--muted);font-size:.95rem;margin-bottom:8px}
+.info-card a{color:var(--rose);font-weight:600;text-decoration:none}
+.hours-table{width:100%;border-collapse:collapse;margin-top:6px}
+.hours-table td{padding:9px 4px;border-bottom:1px solid var(--line);font-size:.94rem}
+.hours-table td:last-child{text-align:right;font-weight:600}
+.form-card{background:#fff;border-radius:16px;padding:38px;box-shadow:0 14px 40px rgba(38,34,31,.08)}
+.form-card h2{margin-bottom:8px}
+.form-card>p{color:var(--muted);font-size:.94rem;margin-bottom:24px}
+label{display:block;font-size:.88rem;font-weight:600;margin:16px 0 6px}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;background:var(--cream)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rose)}
+textarea{resize:vertical;min-height:96px}
+.form-card .btn{width:100%;margin-top:22px;font-size:1rem;padding:15px}
+.hint{font-size:.82rem;color:var(--muted);margin-top:12px;text-align:center}
+.map-frame{border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(38,34,31,.08);margin-top:26px}
+.map-frame iframe{width:100%;height:320px;border:0;display:block}
+footer{background:var(--char);color:#cfc4b4;padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-grid h4{color:#fff;margin-bottom:14px;font-family:'Playfair Display',serif}
+.foot-grid p,.foot-grid a{font-size:.92rem;color:#b7a98f;text-decoration:none;display:block;margin-bottom:8px}
+.copy{border-top:1px solid #3d3833;padding-top:22px;font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#8d8172}
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:60;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25);text-decoration:none}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media(max-width:860px){.split{grid-template-columns:1fr}.links a:not(.btn){display:none}.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Wellness <span>Beauty Clinic</span></a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services &amp; Prices</a>
+      <a href="contact.html">Contact &amp; Booking</a>
+      <a class="btn" href="https://wa.me/447577568786?text=Hi%20Wellness%20Beauty%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <h1>Contact &amp; Booking</h1>
+    <p>WhatsApp is the fastest way to reach us — we usually reply within minutes.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <div class="info-card">
+        <h3>Find us</h3>
+        <p><b>Wellness Beauty Clinic</b><br>52 Stoke Newington High St<br>London N16 7PB</p>
+        <p style="margin-top:12px">Moments from <b>Dalston Kingsland</b> and <b>Rectory Road</b> stations, with buses along the High Street.</p>
+      </div>
+      <div class="info-card">
+        <h3>Talk to us</h3>
+        <p>Phone: <a href="tel:+442072410000">+44 20 7241 0000</a></p>
+        <p>WhatsApp: <a href="https://wa.me/447577568786" target="_blank" rel="noopener">+44 7577 568786</a></p>
+        <p style="margin-top:10px">For microblading consultations, feel free to WhatsApp us a photo — we'll advise on suitability.</p>
+      </div>
+      <div class="info-card">
+        <h3>Opening hours</h3>
+        <table class="hours-table">
+          <tr><td>Monday</td><td>Closed</td></tr>
+          <tr><td>Tuesday</td><td>9:30 AM – 7:30 PM</td></tr>
+          <tr><td>Wednesday</td><td>9:30 AM – 7:30 PM</td></tr>
+          <tr><td>Thursday</td><td>9:30 AM – 7:30 PM</td></tr>
+          <tr><td>Friday</td><td>9:30 AM – 7:30 PM</td></tr>
+          <tr><td>Saturday</td><td>9:30 AM – 7:30 PM</td></tr>
+          <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
+        </table>
+      </div>
+      <div class="map-frame">
+        <iframe title="Map — Wellness Beauty Clinic" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.0820%2C51.5540%2C-0.0660%2C51.5625&layer=mapnik&marker=51.5583%2C-0.0741"></iframe>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Book an appointment</h2>
+      <p>Fill this in and we'll open WhatsApp with your booking request ready to send.</p>
+      <form id="bookForm">
+        <label for="name">Your name</label>
+        <input id="name" type="text" placeholder="e.g. Ayesha Khan" required>
+        <label for="service">Treatment</label>
+        <select id="service" required>
+          <option value="">Choose a treatment…</option>
+          <option>Laser Hair Removal</option>
+          <option>HydraFacial</option>
+          <option>Carbon Laser Glow Peel</option>
+          <option>LVL Lash Lift</option>
+          <option>Eyebrow &amp; Eyelash Tinting</option>
+          <option>Brow Lamination</option>
+          <option>Facial Threading</option>
+          <option>Hot &amp; Strip Waxing</option>
+          <option>Ladies Blow Dry / Colour</option>
+          <option>Manicure / Pedicure</option>
+          <option>Reflexology / Massage</option>
+          <option>Microblading consultation</option>
+          <option>Something else</option>
+        </select>
+        <label for="day">Preferred day</label>
+        <select id="day" required>
+          <option value="">Choose a day…</option>
+          <option>Tuesday</option><option>Wednesday</option><option>Thursday</option>
+          <option>Friday</option><option>Saturday</option><option>Sunday</option>
+        </select>
+        <label for="notes">Anything we should know? (optional)</label>
+        <textarea id="notes" placeholder="Allergies, preferred time, questions…"></textarea>
+        <button class="btn" type="submit">Send Booking via WhatsApp</button>
+        <p class="hint">This opens WhatsApp with your message pre-written — just press send.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Wellness Beauty Clinic</h4><p>Beauty, wellness &amp; personalised care in the heart of Stoke Newington.</p><p>52 Stoke Newington High St<br>London N16 7PB</p></div>
+      <div><h4>Contact</h4><a href="tel:+442072410000">+44 20 7241 0000</a><a href="https://wa.me/447577568786" target="_blank" rel="noopener">WhatsApp: +44 7577 568786</a></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="services.html">Services &amp; Prices</a><a href="contact.html">Contact &amp; Booking</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Wellness Beauty Clinic. Sample website prepared by Abdullah Virk.</span><span>4.7 ★ · 944 Treatwell reviews</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/447577568786?text=Hi%20Wellness%20Beauty%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 32 32"><path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.1c2.3 1.3 4.9 2 7.7 2 8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.1c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2-2-4.4-2-6.9C2.9 8.9 8.9 2.9 16 2.9S29.1 8.9 29.1 16 23.1 29.1 16 29.1zm7.4-10.8c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.4 1.6-.3.3-.5.3-.9.1-.4-.2-1.7-.6-3.3-2-1.2-1.1-2-2.4-2.3-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.2.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.4-1.5 3.5s1.5 4 1.8 4.3c.2.3 3 4.7 7.4 6.5.6.3 1.1.4 1.5.6.6.2 1.2.2 1.7.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.7-.4z"/></svg>
+</a>
+
+<script>
+document.getElementById('bookForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var service = document.getElementById('service').value;
+  var day = document.getElementById('day').value;
+  var notes = document.getElementById('notes').value.trim();
+  var msg = 'Hi Wellness Beauty Clinic! I\'d like to book an appointment.\nName: ' + name + '\nTreatment: ' + service + '\nPreferred day: ' + day;
+  if (notes) msg += '\nNotes: ' + notes;
+  window.open('https://wa.me/447577568786?text=' + encodeURIComponent(msg), '_blank');
+});
+</script>
+</body>
+</html>

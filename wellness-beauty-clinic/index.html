@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wellness Beauty Clinic | Beauty, Wellness & Personalised Care in Stoke Newington</title>
+<meta name="description" content="Wellness Beauty Clinic — Stoke Newington's 4.7-star beauty destination. Laser hair removal, facials, lashes, brows, hair, nails & massage. 52 Stoke Newington High St, London.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf6f1;--rose:#b76e79;--rose-d:#96525e;--char:#26221f;--gold:#c9a227;--muted:#7a6f68;--line:#eadfd4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--char);background:var(--cream);line-height:1.7}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:600;line-height:1.25}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,241,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;letter-spacing:.5px;text-decoration:none}
+.brand span{color:var(--rose)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-size:.95rem;font-weight:500}
+.links a:hover{color:var(--rose)}
+.btn{display:inline-block;background:var(--rose);color:#fff!important;text-decoration:none;padding:12px 26px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.25s;border:none;cursor:pointer}
+.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.gold{background:var(--gold)}
+.btn.gold:hover{background:#a9881f}
+.hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(38,34,31,.82) 20%,rgba(38,34,31,.45) 55%,rgba(38,34,31,.15))}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.78rem;color:#f3d9a4;margin-bottom:14px;font-weight:600}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);max-width:640px;margin-bottom:18px}
+.hero p.lead{font-size:1.12rem;max-width:560px;opacity:.92;margin-bottom:30px;font-weight:300}
+.rating{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:10px 18px;border-radius:999px;margin-bottom:26px;font-size:.95rem;backdrop-filter:blur(4px)}
+.stars{color:#f5c542;letter-spacing:2px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:84px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:12px}
+.sec-head p{color:var(--muted)}
+.sec-head .rule{width:64px;height:3px;background:var(--rose);margin:18px auto 0;border-radius:2px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-grid img{border-radius:18px;box-shadow:0 24px 60px rgba(38,34,31,.14)}
+.about-grid h2{font-size:2.1rem;margin-bottom:16px}
+.about-grid p{color:var(--muted);margin-bottom:14px}
+.tick{list-style:none;margin-top:18px}
+.tick li{padding:8px 0 8px 34px;position:relative;font-weight:500}
+.tick li::before{content:"✓";position:absolute;left:0;color:var(--rose);font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(38,34,31,.08);transition:.3s;text-decoration:none}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 55px rgba(38,34,31,.14)}
+.card img{height:220px;width:100%;object-fit:cover}
+.card .body{padding:24px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.94rem;margin-bottom:12px}
+.card .price{color:var(--rose);font-weight:700}
+.band{background:var(--char);color:#f3ead9}
+.band .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat b{font-family:'Playfair Display',serif;font-size:2.6rem;display:block;color:#f5c542}
+.stat span{font-size:.92rem;opacity:.85}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.rev{background:#fff;border-radius:16px;padding:28px;box-shadow:0 14px 40px rgba(38,34,31,.08)}
+.rev .stars{margin-bottom:12px}
+.rev p{font-style:italic;color:var(--muted);margin-bottom:14px;font-size:.95rem}
+.rev b{font-size:.9rem}
+.brands{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center;margin-top:10px}
+.brands span{font-weight:600;color:var(--muted);font-size:.95rem;letter-spacing:.5px}
+.hours-box{background:#fff;border-radius:16px;padding:34px;box-shadow:0 14px 40px rgba(38,34,31,.08)}
+.hours-box table{width:100%;border-collapse:collapse}
+.hours-box td{padding:10px 4px;border-bottom:1px solid var(--line);font-size:.95rem}
+.hours-box td:last-child{text-align:right;font-weight:600}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+footer{background:var(--char);color:#cfc4b4;padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-grid h4{color:#fff;margin-bottom:14px;font-family:'Playfair Display',serif}
+.foot-grid p,.foot-grid a{font-size:.92rem;color:#b7a98f;text-decoration:none;display:block;margin-bottom:8px}
+.copy{border-top:1px solid #3d3833;padding-top:22px;font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#8d8172}
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:60;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25);text-decoration:none}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media(max-width:860px){.about-grid,.split{grid-template-columns:1fr}.cards,.reviews{grid-template-columns:1fr}.band .stats{grid-template-columns:repeat(2,1fr)}.links a:not(.btn){display:none}.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Wellness <span>Beauty Clinic</span></a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services &amp; Prices</a>
+      <a href="contact.html">Contact &amp; Booking</a>
+      <a class="btn" href="https://wa.me/447577568786?text=Hi%20Wellness%20Beauty%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="bg" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80" alt="Inside Wellness Beauty Clinic salon">
+  <div class="wrap">
+    <div class="eyebrow">Stoke Newington · London</div>
+    <h1>Beauty, Wellness &amp; Personalised Care</h1>
+    <div class="rating"><span class="stars">★★★★★</span> 4.7 · 944 Treatwell reviews</div>
+    <p class="lead">Laser hair removal, facials, lashes, brows, hair, nails and massage — everything under one roof, by Serife, Shazie and their expert team with 20+ years of experience.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/447577568786?text=Hi%20Wellness%20Beauty%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn gold" href="services.html">View Services &amp; Prices</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap about-grid">
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="Relaxing facial treatment">
+    <div>
+      <div class="eyebrow" style="color:var(--rose)">About the clinic</div>
+      <h2>An experience, not just an appointment</h2>
+      <p>Looking after yourself should be more than simply booking a treatment. At Wellness Beauty Clinic on Stoke Newington High Street, every visit is designed to leave you feeling confident, refreshed and completely at ease.</p>
+      <p>Our approach centres on personalised treatments, professional expertise and genuine care — in a beautiful, light-filled space with our signature stained-glass windows for total privacy.</p>
+      <ul class="tick">
+        <li>Serife &amp; Shazie — 20+ years of combined expertise</li>
+        <li>4.7 stars from 944 verified Treatwell reviews</li>
+        <li>Premium brands: L'Oréal, OPI, Dermalogica, Casmara</li>
+        <li>Evenings &amp; weekends available</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>4.7★</b><span>Treatwell rating</span></div>
+      <div class="stat"><b>944+</b><span>Verified reviews</span></div>
+      <div class="stat"><b>20+</b><span>Years of expertise</span></div>
+      <div class="stat"><b>30+</b><span>Treatments under one roof</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Our most-loved treatments</h2>
+      <p>Real treatments, real prices — no surprises.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="cards">
+      <a class="card" href="services.html">
+        <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=800&q=80" alt="Lash lift treatment">
+        <div class="body"><h3>Lashes &amp; Brows</h3><p>LVL lash lift, tinting, brow lamination and threading.</p><span class="price">from £2</span></div>
+      </a>
+      <a class="card" href="services.html">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="HydraFacial skin treatment">
+        <div class="body"><h3>Skin &amp; Facials</h3><p>HydraFacial, Carbon Laser Glow Peel and more.</p><span class="price">from £75</span></div>
+      </a>
+      <a class="card" href="services.html">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Hair colouring and styling">
+        <div class="body"><h3>Hair</h3><p>Blow dries, colour, Olaplex and precision cuts.</p><span class="price">from £35</span></div>
+      </a>
+      <a class="card" href="services.html">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80" alt="Manicure and nail care">
+        <div class="body"><h3>Nails</h3><p>Manicures, traditional pedicures and polish.</p><span class="price">Ask on WhatsApp</span></div>
+      </a>
+      <a class="card" href="services.html">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Relaxing massage therapy">
+        <div class="body"><h3>Massage &amp; Wellness</h3><p>Reflexology, lymphatic drainage and deep relaxation.</p><span class="price">from £35</span></div>
+      </a>
+      <a class="card" href="services.html">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80" alt="Laser hair removal treatment">
+        <div class="body"><h3>Hair Removal</h3><p>Laser hair removal, hot &amp; strip waxing for all.</p><span class="price">from £5</span></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:40px"><a class="btn" href="services.html">See Full Price List</a></div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Loved by Stoke Newington</h2>
+      <p>4.7 stars across 944 verified Treatwell reviews.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="reviews">
+      <div class="rev"><div class="stars">★★★★★</div><p><b>Relaxing atmosphere</b><br>Beautiful classic décor, soft background music and light-filled rooms clients describe as a true escape.</p></div>
+      <div class="rev"><div class="stars">★★★★★</div><p><b>Expert team</b><br>Serife, Shazie and the team bring 20+ years of professional beauty and hair experience to every treatment.</p></div>
+      <div class="rev"><div class="stars">★★★★★</div><p><b>Total privacy</b><br>Signature stained-glass windows let you enjoy the view outside while no one can see in.</p></div>
+    </div>
+    <div class="sec-head" style="margin-top:56px;margin-bottom:0">
+      <p style="margin-bottom:14px">We use only professional, world-leading brands</p>
+      <div class="brands"><span>L'Oréal Majirel</span><span>OPI</span><span>Dermalogica</span><span>Casmara</span><span>Koleston</span><span>Nashi</span><span>Salon System LVL</span><span>Mesoheal</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow" style="color:var(--rose)">Visit us</div>
+      <h2 style="margin-bottom:18px">52 Stoke Newington High St, London N16 7PB</h2>
+      <p style="color:var(--muted);margin-bottom:22px">Moments from Dalston Kingsland and Rectory Road stations. Evening and weekend appointments available — message us on WhatsApp for the fastest reply.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/447577568786?text=Hi%20Wellness%20Beauty%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn gold" href="contact.html">Opening Hours &amp; Map</a>
+      </div>
+    </div>
+    <div class="hours-box">
+      <h3 style="margin-bottom:14px">Opening hours</h3>
+      <table>
+        <tr><td>Monday</td><td>Closed</td></tr>
+        <tr><td>Tuesday – Saturday</td><td>9:30 AM – 7:30 PM</td></tr>
+        <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Wellness Beauty Clinic</h4><p>Beauty, wellness &amp; personalised care in the heart of Stoke Newington.</p><p>52 Stoke Newington High St<br>London N16 7PB</p></div>
+      <div><h4>Contact</h4><a href="tel:+442072410000">+44 20 7241 0000</a><a href="https://wa.me/447577568786" target="_blank" rel="noopener">WhatsApp: +44 7577 568786</a></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="services.html">Services &amp; Prices</a><a href="contact.html">Contact &amp; Booking</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Wellness Beauty Clinic. Sample website prepared by Abdullah Virk.</span><span>4.7 ★ · 944 Treatwell reviews</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/447577568786?text=Hi%20Wellness%20Beauty%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 32 32"><path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.1c2.3 1.3 4.9 2 7.7 2 8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.1c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2-2-4.4-2-6.9C2.9 8.9 8.9 2.9 16 2.9S29.1 8.9 29.1 16 23.1 29.1 16 29.1zm7.4-10.8c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.4 1.6-.3.3-.5.3-.9.1-.4-.2-1.7-.6-3.3-2-1.2-1.1-2-2.4-2.3-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.2.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.5 1.4-1.5 3.5s1.5 4 1.8 4.3c.2.3 3 4.7 7.4 6.5.6.3 1.1.4 1.5.6.6.2 1.2.2 1.7.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.7-.4z"/></svg>
+</a>
+</body>
+</html>
