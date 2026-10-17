@@ -3,308 +3,271 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teddington Ink | Tattoo &amp; Piercing Studio in Teddington</title>
-<meta name="description" content="Teddington Ink — Teddington's custom tattoo & professional piercing studio since 2014. Free consultations, award-winning artists, 5-star rated.">
+<title>Sarah M Aesthetic Clinic | Award-Winning Aesthetic Clinic in Brentford, London</title>
+<meta name="description" content="Sarah M Aesthetic Clinic — HBA-approved, award-winning non-surgical aesthetic treatments in Brentford, London. HydraFacial, HIFU, skin boosters, microneedling and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c0c0e;--bg2:#131316;--card:#17171b;--gold:#c9a227;--gold2:#e8c766;--text:#f2ede4;--muted:#a8a29a;--line:#26262c}
+:root{--ivory:#faf7f1;--cream:#f4ede2;--blush:#efdfd2;--gold:#b3874a;--gold-d:#96702f;--ink:#2c2620;--muted:#7d7264;--line:#e5d9c8;--white:#ffffff}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.2}
 img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
+a{text-decoration:none;color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,12,14,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;letter-spacing:.06em}
-.brand span{color:var(--gold)}
-.nav-links{display:flex;gap:28px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
-.nav-links a{color:var(--muted);transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold2)}
-.btn{display:inline-block;background:var(--gold);color:#111;font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 30px;border-radius:2px;transition:background .2s,transform .2s}
-.btn:hover{background:var(--gold2);transform:translateY(-2px)}
-.btn-outline{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
-.btn-outline:hover{background:var(--gold);color:#111}
-.btn-nav{padding:10px 22px}
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:url('https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,14,.72) 0%,rgba(12,12,14,.55) 50%,var(--bg) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:140px 24px 80px;width:100%}
-.kicker{color:var(--gold2);font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;margin-bottom:18px}
-.hero h1{font-size:clamp(3rem,7vw,5.5rem);margin-bottom:20px}
-.hero h1 em{color:var(--gold2);font-style:italic}
-.hero p.lead{font-size:1.15rem;color:#d8d2c6;max-width:620px;margin-bottom:34px;font-weight:300}
-.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
-/* TRUST BAR */
-.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
-.trust-inner{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto}
-.trust-item{padding:26px 20px;text-align:center;border-left:1px solid var(--line)}
-.trust-item:first-child{border-left:none}
-.trust-item strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--gold2)}
-.trust-item span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-/* SECTIONS */
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.7rem;letter-spacing:.06em}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.42em;color:var(--gold);margin-top:2px}
+.nav-links{display:flex;gap:34px;align-items:center;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a:hover{color:var(--gold-d)}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 30px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;border-radius:2px;transition:.25s;border:1px solid var(--gold)}
+.btn:hover{background:var(--gold-d);border-color:var(--gold-d);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-outline:hover{background:var(--ink);color:#fff}
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=80') center/cover;transform:scale(1.02)}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(30,24,18,.72) 0%,rgba(30,24,18,.38) 55%,rgba(30,24,18,.15) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:640px;padding:90px 0}
+.eyebrow{font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:#e8cf9f;margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem);margin-bottom:20px;font-weight:500}
+.hero h1 em{font-style:italic;color:#f0dcae}
+.hero p{font-size:1.08rem;font-weight:300;opacity:.92;margin-bottom:34px;max-width:520px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn-light{background:#fff;color:var(--ink);border-color:#fff}
+.btn-light:hover{background:var(--blush);border-color:var(--blush)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+/* trust bar */
+.trust{background:var(--ink);color:#e9dcc4;padding:20px 0}
+.trust .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase}
+.trust span b{color:var(--gold);font-weight:600}
+/* sections */
 section{padding:96px 0}
-.sec-kicker{color:var(--gold);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;margin-bottom:14px}
-.sec-title{font-size:clamp(2.1rem,4vw,3.2rem);margin-bottom:18px}
-.sec-title em{color:var(--gold2);font-style:italic}
-.sec-sub{color:var(--muted);max-width:680px;margin-bottom:48px;font-weight:300}
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.about-img{border-radius:4px;overflow:hidden;border:1px solid var(--line)}
-.about-img img{width:100%;height:520px;object-fit:cover;transition:transform .6s}
-.about-img:hover img{transform:scale(1.03)}
-.about-copy p{color:#cfc9bd;margin-bottom:18px;font-weight:300}
-.about-copy p strong{color:var(--text)}
-.check-list{list-style:none;margin:26px 0}
-.check-list li{padding:10px 0 10px 34px;position:relative;color:#d8d2c6;font-weight:300}
-.check-list li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700}
-/* SERVICES */
-.services{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .25s,border-color .25s}
-.svc:hover{transform:translateY(-6px);border-color:var(--gold)}
-.svc img{width:100%;height:230px;object-fit:cover}
-.svc-body{padding:30px 28px}
-.svc-body h3{font-size:1.7rem;margin-bottom:10px;color:var(--gold2)}
-.svc-body p{color:var(--muted);font-size:.95rem;font-weight:300;margin-bottom:18px}
-.svc-body a{color:var(--gold2);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
-/* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-.why{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:36px 28px;text-align:center}
-.why .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold);display:block;margin-bottom:8px}
-.why h3{font-size:1.35rem;margin-bottom:10px}
-.why p{color:var(--muted);font-size:.9rem;font-weight:300}
-/* GALLERY PREVIEW */
-.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.gal-grid a{display:block;overflow:hidden;border-radius:4px;border:1px solid var(--line);position:relative}
-.gal-grid img{width:100%;height:280px;object-fit:cover;transition:transform .5s}
-.gal-grid a:hover img{transform:scale(1.06)}
-.center{text-align:center;margin-top:44px}
-/* VISIT */
-.visit{background:var(--bg2);border-top:1px solid var(--line)}
-.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-.hours{width:100%;border-collapse:collapse;margin-top:8px}
-.hours td{padding:12px 4px;border-bottom:1px solid var(--line);color:#d8d2c6;font-weight:300}
-.hours td:last-child{text-align:right;color:var(--gold2)}
-.visit h3{font-size:1.6rem;margin:26px 0 6px;color:var(--gold2)}
-.visit p{color:var(--muted);font-weight:300}
-/* WHATSAPP BAND */
-.wa-band{background:linear-gradient(135deg,#0f2e1d,#123722);border-top:1px solid #1e4d2e;border-bottom:1px solid #1e4d2e;text-align:center;padding:80px 24px}
-.wa-band h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
-.wa-band p{color:#bcd8c2;max-width:560px;margin:0 auto 30px;font-weight:300}
-.btn-wa{background:#25d366;color:#062b16;display:inline-flex;align-items:center;gap:12px}
-.btn-wa:hover{background:#3ae374}
-/* FOOTER */
-footer{padding:64px 0 32px;background:#08080a}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:44px}
-.foot-grid h4{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.foot-grid p,.foot-grid a{color:var(--muted);font-size:.92rem;font-weight:300}
-.foot-grid a{display:block;padding:5px 0}
-.foot-grid a:hover{color:var(--gold2)}
-.foot-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#6f6a62;font-size:.82rem}
-/* RESPONSIVE */
-@media(max-width:900px){
-.nav-links{display:none}
-.about-grid,.visit-grid{grid-template-columns:1fr;gap:40px}
-.svc-grid{grid-template-columns:1fr}
-.why-grid{grid-template-columns:1fr 1fr}
-.gal-grid{grid-template-columns:1fr 1fr}
-.trust-inner{grid-template-columns:1fr 1fr}
-.trust-item:nth-child(3){border-left:none}
-.foot-grid{grid-template-columns:1fr}
-section{padding:64px 0}
-.about-img img{height:340px}
-}
-@media(max-width:560px){.why-grid,.gal-grid{grid-template-columns:1fr}}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 56px}
+.sec-head .eyebrow{color:var(--gold-d)}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:14px 0 16px}
+.sec-head p{color:var(--muted)}
+.sec-head .rule{width:64px;height:2px;background:var(--gold);margin:22px auto 0}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about img{border-radius:4px;box-shadow:0 30px 60px -20px rgba(90,70,40,.35)}
+.about h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:14px 0 20px}
+.about p{color:var(--muted);margin-bottom:16px}
+.about ul{list-style:none;margin:24px 0}
+.about li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid var(--line)}
+.about li::before{content:"◆";position:absolute;left:4px;color:var(--gold);font-size:.7rem;top:16px}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 48px -18px rgba(90,70,40,.3)}
+.card img{height:230px;width:100%;object-fit:cover}
+.card-body{padding:26px}
+.card-body h3{font-size:1.45rem;margin-bottom:10px}
+.card-body p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+.card-body a{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);font-weight:600}
+/* why */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
+.why-item{background:var(--white);padding:38px 22px;border:1px solid var(--line);border-radius:4px}
+.why-item .n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold)}
+.why-item h3{font-size:1.25rem;margin:12px 0 8px}
+.why-item p{color:var(--muted);font-size:.9rem}
+/* testimonials */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.quote{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);padding:34px;border-radius:0 4px 4px 0}
+.quote p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;margin-bottom:14px}
+.quote cite{font-style:normal;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d)}
+.stars{color:var(--gold);letter-spacing:.2em;margin-bottom:12px}
+/* cta */
+.cta{background:linear-gradient(rgba(35,28,20,.78),rgba(35,28,20,.78)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=80') center/cover;color:#fff;text-align:center}
+.cta h2{font-size:clamp(2rem,3.8vw,3rem);margin-bottom:16px}
+.cta p{opacity:.9;max-width:560px;margin:0 auto 32px;font-weight:300}
+/* footer */
+footer{background:var(--ink);color:#cfc2ab;padding:64px 0 0;font-size:.94rem}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.foot-grid h4{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.25rem;margin-bottom:16px;letter-spacing:.04em}
+.foot-grid p,.foot-grid a{color:#b9ac93}
+.foot-grid a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid #453c30;padding:20px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem;color:#8f836d}
+/* whatsapp float */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.28);transition:.25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media(max-width:900px){.about{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}.quotes{grid-template-columns:1fr}.nav-links{display:none}.foot-grid{grid-template-columns:1fr}section{padding:64px 0}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">TEDDINGTON <span>INK</span></a>
-    <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact &amp; Booking</a>
-    </div>
-    <a class="btn btn-nav" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">Book Now</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="hero-content">
-    <div class="kicker">Teddington · South West London · Since 2014</div>
-    <h1>Tattoos.<br>Piercings.<br><em>Built on Precision.</em></h1>
-    <p class="lead">Teddington's custom tattoo &amp; piercing studio — serving Twickenham, Kingston &amp; Richmond. Award-winning artists, clinical hygiene, and a warm welcome for first-timers and collectors alike.</p>
-    <div class="hero-cta">
-      <a class="btn" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">Book Free Consultation</a>
-      <a class="btn btn-outline" href="gallery.html">See Our Work</a>
-    </div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">Sarah M<small>AESTHETIC CLINIC</small></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">Book on WhatsApp</a>
+    </nav>
   </div>
 </header>
 
+<div class="hero">
+  <div class="hero-bg"></div><div class="hero-veil"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Brentford · London — HBA Approved Clinic</div>
+    <h1>The Art of <em>Natural</em> Beauty</h1>
+    <p>An award-winning aesthetic clinic specialising in advanced non-surgical treatments — bespoke plans, medically trained practitioners, and results that look like you on your very best day.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-light" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic%2C%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener">Free Consultation</a>
+      <a class="btn btn-ghost" href="treatments.html">Explore Treatments</a>
+    </div>
+  </div>
+</div>
+
 <div class="trust">
-  <div class="trust-inner">
-    <div class="trust-item"><strong>10+</strong><span>Years of Experience</span></div>
-    <div class="trust-item"><strong>5-Star</strong><span>Google Rated Studio</span></div>
-    <div class="trust-item"><strong>Free</strong><span>Consultations</span></div>
-    <div class="trust-item"><strong>Fully</strong><span>Licensed &amp; Insured</span></div>
+  <div class="wrap">
+    <span><b>◆</b> HBA Approved Clinic</span>
+    <span><b>◆</b> Medically Trained Practitioners</span>
+    <span><b>◆</b> Award-Winning 2025</span>
+    <span><b>◆</b> 200+ Five-Star Reviews</span>
   </div>
 </div>
 
 <section>
-  <div class="wrap about-grid">
-    <div class="about-img">
-      <img src="https://images.unsplash.com/photo-1611695434369-a8f5d76ceb7b?auto=format&fit=crop&w=1200&q=80" alt="Inside the Teddington Ink studio" loading="lazy">
-    </div>
-    <div class="about-copy">
-      <div class="sec-kicker">Our Studio</div>
-      <h2 class="sec-title">Your local studio, <em>built on care and craft</em></h2>
-      <p>Welcome to <strong>Teddington Ink</strong> — a bold, friendly and professional tattoo and piercing studio in the heart of Teddington. With <strong>over a decade of experience</strong>, our accredited artists specialise in precision tattoos and safe, stylish piercings.</p>
-      <p>When we opened in <strong>2014</strong>, we were a no-frills studio. After a full renovation in <strong>2024 under new management</strong>, we've transformed the space into a modern, welcoming and fully licensed environment — built for creativity and comfort.</p>
-      <ul class="check-list">
-        <li>Custom tattoos designed around your ideas</li>
-        <li>Professional piercings with quality jewellery</li>
-        <li>Strict clinical hygiene — sterilised everything</li>
-        <li>No egos. No pressure. Just honest advice.</li>
+  <div class="wrap about">
+    <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=1000&q=80" alt="Advanced facial treatment at Sarah M Aesthetic Clinic">
+    <div>
+      <div class="eyebrow" style="color:var(--gold-d)">Welcome to Sarah M</div>
+      <h2>Beauty is a science — <em style="color:var(--gold-d)">we've mastered it.</em></h2>
+      <p>Located on the border of Brentford, London, Sarah M Aesthetic Clinic is an award-winning clinic specialising in advanced non-surgical aesthetic treatments. As an HBA-approved clinic staffed by medically trained professionals, every treatment is tailored to your unique needs.</p>
+      <p>With an emphasis on client comfort and privacy, our appointment-only clinic pairs award-winning aesthetic technologies with established UK skincare brands — so you receive exceptional care in an atmosphere of total luxury.</p>
+      <ul>
+        <li>Complimentary phone consultations with a tailored treatment plan</li>
+        <li>Strict safety &amp; hygiene protocols on every procedure</li>
+        <li>Natural-looking results — never overdone</li>
       </ul>
-      <a class="btn btn-outline" href="contact.html">Visit the Studio</a>
+      <a class="btn btn-outline" href="contact.html">Visit the Clinic</a>
     </div>
   </div>
 </section>
 
-<section class="services">
+<section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="sec-kicker">What We Offer</div>
-    <h2 class="sec-title">Ink &amp; piercing, <em>done right</em></h2>
-    <p class="sec-sub">From bespoke tattoo designs to precision piercings, our studio is built to deliver quality, safety and confidence — every single time.</p>
-    <div class="svc-grid">
-      <div class="svc">
-        <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80" alt="Custom tattoo work" loading="lazy">
-        <div class="svc-body">
-          <h3>Custom Tattoos</h3>
-          <p>From bold sleeves to subtle linework — including Japanese Irezumi, blackwork and fine line. Every piece starts as a conversation and ends as a design made only for you.</p>
-          <a href="gallery.html">View gallery →</a>
-        </div>
+    <div class="sec-head">
+      <div class="eyebrow">Our Treatments</div>
+      <h2>Signature <em style="color:var(--gold-d)">treatments</em></h2>
+      <p>From glow-boosting facials to precision body contouring — discover our most loved treatments.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="HydraFacial treatment">
+        <div class="card-body"><h3>HydraFacial</h3><p>Deep-cleanse, exfoliation and intense hydration for an instant lit-from-within glow.</p><a href="treatments.html">Discover →</a></div>
       </div>
-      <div class="svc">
-        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Professional piercing jewellery" loading="lazy">
-        <div class="svc-body">
-          <h3>Professional Piercings</h3>
-          <p>Safe, stylish piercings performed by experienced professionals using top-tier jewellery — with full aftercare guidance so everything heals beautifully.</p>
-          <a href="contact.html">Book a piercing →</a>
-        </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80" alt="HIFU non-surgical facelift">
+        <div class="card-body"><h3>HIFU Face Lift</h3><p>Non-surgical skin tightening and lifting using focused ultrasound technology.</p><a href="treatments.html">Discover →</a></div>
       </div>
-      <div class="svc">
-        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80" alt="Free consultation at the studio" loading="lazy">
-        <div class="svc-body">
-          <h3>Free Consultations</h3>
-          <p>Got questions? Talk through your idea online via WhatsApp or in person at the studio. No pressure, no upselling — just honest expert advice.</p>
-          <a href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">Chat on WhatsApp →</a>
-        </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&fit=crop&w=800&q=80" alt="Skin boosters and injectables">
+        <div class="card-body"><h3>Skin Boosters</h3><p>Profhilo and injectable hydration that remodels skin from within.</p><a href="treatments.html">Discover →</a></div>
       </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80" alt="Microneedling therapy">
+        <div class="card-body"><h3>Microneedling</h3><p>Stimulates collagen to soften acne scars, refine pores and renew texture.</p><a href="treatments.html">Discover →</a></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Body contouring and fat reduction">
+        <div class="card-body"><h3>Fat Reduction</h3><p>Targeted cryo and contouring treatments that sculpt stubborn areas.</p><a href="treatments.html">Discover →</a></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80" alt="Anti-ageing injectables">
+        <div class="card-body"><h3>Anti-Ageing Injectables</h3><p>Subtle, expertly placed treatments that soften lines and restore balance.</p><a href="treatments.html">Discover →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why Sarah M</div>
+      <h2>Care you can <em style="color:var(--gold-d)">trust</em></h2>
+      <div class="rule"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="n">01</div><h3>Medically Trained</h3><p>Every treatment is performed by highly qualified, experienced practitioners.</p></div>
+      <div class="why-item"><div class="n">02</div><h3>HBA Approved</h3><p>An accredited clinic meeting rigorous UK safety and hygiene standards.</p></div>
+      <div class="why-item"><div class="n">03</div><h3>Bespoke Plans</h3><p>No one-size-fits-all — your journey is designed around your skin and goals.</p></div>
+      <div class="why-item"><div class="n">04</div><h3>Total Privacy</h3><p>An appointment-only clinic where your comfort and discretion come first.</p></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="sec-kicker">Why Teddington Ink?</div>
-    <h2 class="sec-title">Real talent, <em>no ego</em></h2>
-    <p class="sec-sub">We're not a chain. We're not a walk-in mill. We're a small, focused studio built on craft, honesty and repeat clients — from first tattoo to full sleeve.</p>
-    <div class="why-grid">
-      <div class="why"><span class="num">01</span><h3>Award-Winning Artists</h3><p>Experienced artists who bring skill, not attitude — including resident tattooist Kodee.</p></div>
-      <div class="why"><span class="num">02</span><h3>5-Star Google Reviews</h3><p>Hundreds of glowing reviews from happy clients across South West London — and growing.</p></div>
-      <div class="why"><span class="num">03</span><h3>10+ Years of Experience</h3><p>Trusted by locals since 2014. We've been doing this a while — and it shows.</p></div>
-      <div class="why"><span class="num">04</span><h3>Safety First, Always</h3><p>Strict hygiene protocols, sterilised equipment and quality materials. Never any corners cut.</p></div>
+    <div class="sec-head">
+      <div class="eyebrow">Client Love</div>
+      <h2>What our <em style="color:var(--gold-d)">clients say</em></h2>
+      <div class="rule"></div>
+    </div>
+    <div class="quotes">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"Sarah is just amazing. She provided me with great customer service before, during and after my treatment. I felt completely at ease."</p>
+        <cite>— Verified Google Review</cite>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"The results look so natural — exactly what I asked for. The clinic is beautiful and the whole experience felt luxurious."</p>
+        <cite>— Verified Google Review</cite>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="services">
+<section class="cta">
   <div class="wrap">
-    <div class="sec-kicker">Recent Work</div>
-    <h2 class="sec-title">Fresh from <em>the chair</em></h2>
-    <p class="sec-sub">A glimpse of what's been coming out of the studio lately — see the full collection in our gallery.</p>
-    <div class="gal-grid">
-      <a href="gallery.html"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=800&q=80" alt="Tattoo artwork" loading="lazy"></a>
-      <a href="gallery.html"><img src="https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=800&q=80" alt="Tattoo artwork" loading="lazy"></a>
-      <a href="gallery.html"><img src="https://images.unsplash.com/photo-1613505879804-bc32efd1e76d?auto=format&fit=crop&w=800&q=80" alt="Fine line tattoo work" loading="lazy"></a>
-      <a href="gallery.html"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80" alt="Piercing jewellery" loading="lazy"></a>
-    </div>
-    <div class="center"><a class="btn btn-outline" href="gallery.html">Open Full Gallery</a></div>
+    <div class="eyebrow" style="color:#e8cf9f">Begin Your Journey</div>
+    <h2>Your best skin <em style="color:#f0dcae">starts here.</em></h2>
+    <p>Book a complimentary phone consultation and receive a tailored treatment plan — with a £20 booking fee fully redeemable against your appointment.</p>
+    <a class="btn btn-light" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">Chat on WhatsApp</a>
   </div>
 </section>
-
-<section class="visit">
-  <div class="wrap visit-grid">
-    <div>
-      <div class="sec-kicker">Find Us</div>
-      <h2 class="sec-title">In the heart of <em>Teddington</em></h2>
-      <h3>Address</h3>
-      <p>201 Waldegrave Road<br>Teddington, TW11 8LX<br>United Kingdom</p>
-      <h3>Contact</h3>
-      <p>Phone / WhatsApp: <a href="https://wa.me/447902415284" target="_blank" rel="noopener" style="color:var(--gold2)">+44 7902 415284</a><br>Email: <a href="mailto:hello@teddingtonink.co.uk" style="color:var(--gold2)">hello@teddingtonink.co.uk</a></p>
-      <h3>Areas We Serve</h3>
-      <p>Teddington · Twickenham · Hampton · Kingston · Richmond · Strawberry Hill · Hampton Hill · Whitton · Fulwell — and clients travel from all over London.</p>
-    </div>
-    <div>
-      <div class="sec-kicker">Opening Hours</div>
-      <h2 class="sec-title">When to <em>visit</em></h2>
-      <table class="hours">
-        <tr><td>Monday</td><td>10:00 am – 6:00 pm</td></tr>
-        <tr><td>Tuesday</td><td>10:00 am – 6:00 pm</td></tr>
-        <tr><td>Wednesday</td><td>10:00 am – 6:00 pm</td></tr>
-        <tr><td>Thursday</td><td>10:00 am – 6:00 pm</td></tr>
-        <tr><td>Friday</td><td>10:00 am – 6:00 pm</td></tr>
-        <tr><td>Saturday</td><td>10:00 am – 6:00 pm</td></tr>
-        <tr><td>Sunday</td><td>Closed</td></tr>
-      </table>
-      <div style="margin-top:30px"><a class="btn" href="contact.html">Plan Your Visit</a></div>
-    </div>
-  </div>
-</section>
-
-<div class="wa-band">
-  <h2 class="serif">Ready for some new ink?</h2>
-  <p>Message us on WhatsApp for a free consultation — online check-ins are the quickest way to get booked in.</p>
-  <a class="btn btn-wa" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
-    Chat on WhatsApp
-  </a>
-</div>
 
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="index.html" style="margin-bottom:14px;display:inline-block">TEDDINGTON <span>INK</span></a>
-        <p>Teddington's custom tattoo &amp; piercing studio since 2014. Bold ink. Clean piercings. Zero attitude — right in the heart of Teddington.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact &amp; Booking</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>201 Waldegrave Road<br>Teddington, TW11 8LX</p>
-        <a href="https://wa.me/447902415284" target="_blank" rel="noopener">+44 7902 415284</a>
-        <a href="mailto:hello@teddingtonink.co.uk">hello@teddingtonink.co.uk</a>
-      </div>
+  <div class="wrap foot-grid">
+    <div>
+      <h4>Sarah M Aesthetic Clinic</h4>
+      <p>981 Great West Road<br>London TW8 9DN<br>United Kingdom</p>
+      <p style="margin-top:12px">An award-winning, HBA-approved aesthetic clinic in Brentford, London.</p>
     </div>
-    <div class="foot-bottom">
-      <span>© Teddington Ink — Sample website prepared by Abdullah Virk</span>
-      <span>Mon–Sat 10:00–18:00 · Sun Closed</span>
+    <div>
+      <h4>Contact</h4>
+      <p>Phone: <a href="tel:+442034174350">020 3417 4350</a><br>
+      Mobile / WhatsApp: <a href="https://wa.me/447733801122" target="_blank" rel="noopener">07733 801122</a><br>
+      Email: <a href="mailto:hello@sarahmaesthetics.co.uk">hello@sarahmaesthetics.co.uk</a></p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="index.html">Home</a><br><a href="treatments.html">Treatments</a><br><a href="contact.html">Contact &amp; Booking</a></p>
     </div>
   </div>
+  <div class="foot-bottom wrap">
+    <span>© 2026 Sarah M Aesthetic Clinic. All rights reserved.</span>
+    <span>Sample website prepared by Abdullah Virk</span>
+  </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/447733801122?text=Hi%20Sarah%20M%20Aesthetic%20Clinic!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.5 1.2 1.2-4.4-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5 9.6 10.4 5 16 5s11 4.6 11 10.8-4.9 9-10 9zm6-6.8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-.9-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.2-.6l.5-.6c.2-.2.2-.4.1-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8 1.9.9 2.7.9 3.6.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.7-.4z"/></svg>
+</a>
 
 </body>
 </html>
