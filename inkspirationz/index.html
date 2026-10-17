@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inkspirationz Tattoo & Piercing Studio | Greenford, London</title>
+<meta name="description" content="Inkspirationz Tattoo & Piercing Studio, Greenford London. Custom tattoos by Dubz Singh & team — black & grey realism, portraits, Japanese, colour. Book instantly on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--bg2:#131316;--red:#d90429;--red2:#ef233c;--txt:#f4f4f5;--mut:#a7a7ad;--line:#232327}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,11,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Oswald';font-size:1.35rem;font-weight:700;letter-spacing:.06em;text-decoration:none}
+.brand span{color:var(--red2)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{color:var(--mut);text-decoration:none;font-size:.92rem;font-weight:500}
+.links a:hover,.links a.on{color:#fff}
+.btn{display:inline-block;background:var(--red);color:#fff!important;text-decoration:none;font-family:'Oswald';font-weight:600;letter-spacing:.05em;padding:13px 30px;border-radius:4px;text-transform:uppercase;font-size:.95rem;transition:.2s}
+.btn:hover{background:var(--red2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:1px solid #3a3a40}
+.btn.ghost:hover{border-color:var(--red2);background:rgba(217,4,41,.12)}
+.wa{background:#25D366!important}
+.wa:hover{background:#1fb857!important}
+/* HERO */
+.hero{min-height:96vh;display:flex;align-items:flex-end;position:relative;background:url('https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1600&q=80') center/cover;padding:130px 0 70px}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,.35) 40%,rgba(10,10,11,.94) 100%)}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 22px;width:100%}
+.kick{display:inline-block;color:var(--red2);font-family:'Oswald';letter-spacing:.22em;font-size:.85rem;margin-bottom:14px}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--red2)}
+.hero p{max-width:560px;color:#d8d8dc;margin:18px 0 30px;font-size:1.06rem}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:34px;margin-top:36px;flex-wrap:wrap}
+.trust div b{font-family:'Oswald';font-size:1.7rem;display:block}
+.trust div span{color:var(--mut);font-size:.85rem}
+/* SECTIONS */
+section{padding:84px 0}
+.sec-kick{color:var(--red2);font-family:'Oswald';letter-spacing:.22em;font-size:.82rem}
+h2{font-size:clamp(1.9rem,4vw,3rem);margin:10px 0 18px;font-weight:600}
+h2 em{font-style:normal;color:var(--red2)}
+.lead{color:var(--mut);max-width:640px;margin-bottom:40px}
+/* STYLES GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--red)}
+.card img{width:100%;height:230px;object-fit:cover;display:block}
+.card .pad{padding:22px}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:.94rem}
+/* WHATSAPP BANNER */
+.waband{background:linear-gradient(135deg,#0d3b21,#0a0a0b 70%);border:1px solid #1c5c34;border-radius:14px;padding:46px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.waband h2{margin-top:8px}
+.waband p{color:#cfe8d6;margin:14px 0 24px}
+.waband .big{font-family:'Oswald';font-size:2rem;color:#25D366;letter-spacing:.03em}
+/* ARTIST */
+.artist{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.artist img{width:100%;height:520px;object-fit:cover;border-radius:12px}
+.artist ul{list-style:none;margin:22px 0}
+.artist li{padding:10px 0;border-bottom:1px solid var(--line);color:#d8d8dc}
+.artist li b{color:var(--red2);font-family:'Oswald';margin-right:10px}
+/* REVIEWS */
+.rev{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:30px}
+.rev p{font-size:1.02rem;color:#e4e4e7;margin-bottom:16px}
+.rev .who{color:var(--mut);font-size:.88rem}
+.stars{color:#ffb400;letter-spacing:.15em;margin-bottom:12px}
+/* HOURS/CONTACT STRIP */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.strip .cell{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:26px}
+.cell h3{font-size:1rem;color:var(--red2);letter-spacing:.12em;margin-bottom:10px}
+.cell p{color:#d8d8dc}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:44px 0;color:var(--mut);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.credit{margin-top:18px;font-size:.8rem;color:#6b6b72}
+/* FLOAT WA */
+.wafloat{position:fixed;bottom:22px;right:22px;z-index:60;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.7rem;box-shadow:0 6px 24px rgba(37,211,102,.4)}
+@media(max-width:860px){.artist{grid-template-columns:1fr}.waband{grid-template-columns:1fr;padding:32px 24px}.links a:not(.btn){display:none}.hero{min-height:88vh}}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+<a class="brand" href="index.html">INKSPIRATIONZ<span>.</span></a>
+<div class="links">
+<a href="index.html" class="on">Home</a><a href="gallery.html">Work &amp; Styles</a><a href="contact.html">Contact &amp; Booking</a>
+<a class="btn wa" href="https://wa.me/447429592222?text=Hi%20Inkspirationz!%20I%27d%20like%20to%20book%20a%20consultation.">WhatsApp Us</a>
+</div></div></nav>
+
+<header class="hero"><div class="hero-in">
+<span class="kick">GREENFORD · LONDON — TATTOO &amp; PIERCING STUDIO</span>
+<h1>Ink that speaks<br><em>your story.</em></h1>
+<p>Custom tattoos by Dubz Singh &amp; team — black &amp; grey realism, portraits, Japanese art and colour. No 3–7 day waits: message us on WhatsApp and get an answer today.</p>
+<div class="cta-row">
+<a class="btn wa" href="https://wa.me/447429592222?text=Hi%20Inkspirationz!%20I%27d%20like%20to%20book%20a%20consultation.">Book on WhatsApp</a>
+<a class="btn ghost" href="gallery.html">See the work</a>
+</div>
+<div class="trust">
+<div><b>4.8 ★</b><span>165 Google reviews</span></div>
+<div><b>£50</b><span>shop minimum</span></div>
+<div><b>18+</b><span>walk-ins welcome</span></div>
+</div>
+</div></header>
+
+<section><div class="wrap">
+<span class="sec-kick">WHAT WE DO</span>
+<h2>Styles we <em>master.</em></h2>
+<p class="lead">Every piece is custom-designed for you — never flash off the wall. Quality, hygiene and originality in every session.</p>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80" alt="Black and grey realism tattoo"><div class="pad"><h3>Black &amp; Grey Realism</h3><p>Portraits and realism with depth, smooth shading and photographic detail.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=800&q=80" alt="Japanese style tattoo"><div class="pad"><h3>Japanese Art</h3><p>Bold flowing compositions — koi, dragons, florals and large-scale work.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1613505879804-bc32efd1e76d?auto=format&fit=crop&w=800&q=80" alt="Fine line tattoo"><div class="pad"><h3>Fine Line &amp; Colour</h3><p>Delicate linework and vibrant colour pieces, designed around your body.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=800&q=80" alt="Cover-up tattoo"><div class="pad"><h3>Cover-Ups</h3><p>Old ink reborn — clever reworks that turn regrets into centrepieces.</p></div></div>
+</div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+<div class="waband">
+<div>
+<span class="sec-kick" style="color:#25D366">FASTEST WAY TO BOOK</span>
+<h2>WhatsApp us.<br>Get an answer <em style="color:#25D366">today.</em></h2>
+<p>No online forms sitting unanswered for days. Send your idea, reference photos and placement — Dubz or the team replies directly and books you in.</p>
+<a class="btn wa" href="https://wa.me/447429592222?text=Hi%20Inkspirationz!%20I%27d%20like%20to%20book%20a%20consultation.">Chat on WhatsApp</a>
+</div>
+<div style="text-align:center"><div class="big">07429 592222</div><p style="margin:8px 0 0">Tap to open chat →</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="artist">
+<img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=900&q=80" alt="Tattoo artist at work in the studio">
+<div>
+<span class="sec-kick">THE ARTIST</span>
+<h2>Dubz Singh <em>&amp; team.</em></h2>
+<p style="color:var(--mut)">Greenford's home of creativity, precision and passion for body art. A community of artists turning ideas into timeless art on skin — in a safe, clean, comfortable studio.</p>
+<ul>
+<li><b>01</b>Custom designs drawn for you — never generic flash</li>
+<li><b>02</b>Strict hygiene, sterile setup, single-use needles</li>
+<li><b>03</b>Walk-ins welcome · deposits secure your appointment</li>
+<li><b>04</b>Piercings by experienced professionals</li>
+</ul>
+<a class="btn" href="gallery.html">View recent work</a>
+</div>
+</div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+<span class="sec-kick">REVIEWS</span>
+<h2>Loved across <em>London.</em></h2>
+<p class="lead">4.8 stars from 165 Google reviews.</p>
+<div class="grid">
+<div class="rev"><div class="stars">★★★★★</div><p>"Super clean studio and lovely people — will definitely be back for my next one."</p><div class="who">— Sarah L.</div></div>
+<div class="rev"><div class="stars">★★★★★</div><p>"By far the best studio in London. Great vibe, friendly staff, world-class artists."</p><div class="who">— Daniel P.</div></div>
+<div class="rev"><div class="stars">★★★★★</div><p>"Got a cover-up done — the detail and shading are perfect. Thank you guys!"</p><div class="who">— Aisha K.</div></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<span class="sec-kick">VISIT US</span>
+<h2>Find the <em>studio.</em></h2>
+<div class="strip" style="margin-top:26px">
+<div class="cell"><h3>ADDRESS</h3><p>110 Ruislip Road, Greenford,<br>London UB6 9QH</p></div>
+<div class="cell"><h3>HOURS</h3><p>Daily · 12:00pm – 8:00pm<br>Walk-ins welcome</p></div>
+<div class="cell"><h3>CONTACT</h3><p>WhatsApp: 07429 592222<br>020 8575 5280<br>TATTOOS@INKSPIRATIONZ.CO.UK</p></div>
+</div>
+<div style="margin-top:34px"><a class="btn wa" href="https://wa.me/447429592222?text=Hi%20Inkspirationz!%20I%27d%20like%20to%20book%20a%20consultation.">Message us on WhatsApp</a></div>
+</div></section>
+
+<footer><div class="wrap"><div class="foot">
+<div><a class="brand" href="index.html" style="font-size:1.1rem">INKSPIRATIONZ<span>.</span></a><p style="margin-top:10px">110 Ruislip Road, Greenford, London UB6 9QH</p></div>
+<div><a href="gallery.html" style="color:var(--mut);text-decoration:none;margin-right:18px">Work &amp; Styles</a><a href="contact.html" style="color:var(--mut);text-decoration:none">Contact &amp; Booking</a></div>
+</div>
+<p class="credit">Sample website prepared by Abdullah Virk.</p>
+</div></footer>
+
+<a class="wafloat" href="https://wa.me/447429592222?text=Hi%20Inkspirationz!%20I%27d%20like%20to%20book%20a%20consultation." aria-label="Chat on WhatsApp">✆</a>
+</body>
+</html>
