@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Teddington Ink — Tattoo &amp; Piercing Studio, Teddington</title>
+<meta name="description" content="See recent tattoo and piercing work from Teddington Ink — custom designs, fine line, blackwork, Japanese Irezumi and professional piercings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0c0e;--bg2:#131316;--card:#17171b;--gold:#c9a227;--gold2:#e8c766;--text:#f2ede4;--muted:#a8a29a;--line:#26262c}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,12,14,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;letter-spacing:.06em}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold2)}
+.btn{display:inline-block;background:var(--gold);color:#111;font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 30px;border-radius:2px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:#111}
+.btn-nav{padding:10px 22px}
+.page-head{padding:170px 0 70px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#1b1b20 0%,var(--bg) 65%)}
+.kicker{color:var(--gold2);font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;margin-bottom:18px}
+.page-head h1{font-size:clamp(2.6rem,5.5vw,4.2rem);margin-bottom:16px}
+.page-head h1 em{color:var(--gold2);font-style:italic}
+.page-head p{color:var(--muted);max-width:640px;margin:0 auto;font-weight:300}
+section{padding:80px 0}
+.sec-kicker{color:var(--gold);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;margin-bottom:14px}
+.sec-title{font-size:clamp(2rem,3.8vw,3rem);margin-bottom:18px}
+.sec-title em{color:var(--gold2);font-style:italic}
+.sec-sub{color:var(--muted);max-width:680px;margin-bottom:44px;font-weight:300}
+/* STYLE TAGS */
+.styles{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:56px}
+.style-tag{border:1px solid var(--line);background:var(--card);padding:12px 24px;border-radius:100px;font-size:.85rem;letter-spacing:.08em;color:#d8d2c6;transition:border-color .2s,color .2s}
+.style-tag:hover{border-color:var(--gold);color:var(--gold2)}
+/* GALLERY */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gal figure{position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--line);cursor:pointer}
+.gal img{width:100%;height:380px;object-fit:cover;transition:transform .6s}
+.gal figure:hover img{transform:scale(1.07)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 22px 18px;background:linear-gradient(transparent,rgba(8,8,10,.92));font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#fff;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.gal figure:hover figcaption{opacity:1;transform:translateY(0)}
+.gal figcaption small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-top:4px}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.94);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-height:86vh;max-width:92vw;border:1px solid var(--line);border-radius:4px}
+.lightbox .close{position:absolute;top:22px;right:30px;font-size:2.4rem;color:var(--gold2);cursor:pointer;line-height:1}
+.lightbox .cap{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#d8d2c6;font-family:'Cormorant Garamond',serif;font-size:1.4rem}
+/* PROCESS */
+.process{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:34px 26px}
+.step .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);display:block;margin-bottom:10px}
+.step h3{font-size:1.4rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.9rem;font-weight:300}
+/* CTA */
+.wa-band{background:linear-gradient(135deg,#0f2e1d,#123722);border-top:1px solid #1e4d2e;text-align:center;padding:80px 24px}
+.wa-band h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
+.wa-band p{color:#bcd8c2;max-width:560px;margin:0 auto 30px;font-weight:300}
+.btn-wa{background:#25d366;color:#062b16;display:inline-flex;align-items:center;gap:12px}
+.btn-wa:hover{background:#3ae374}
+footer{padding:64px 0 32px;background:#08080a}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:44px}
+.foot-grid h4{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.foot-grid p,.foot-grid a{color:var(--muted);font-size:.92rem;font-weight:300}
+.foot-grid a{display:block;padding:5px 0}
+.foot-grid a:hover{color:var(--gold2)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#6f6a62;font-size:.82rem}
+@media(max-width:900px){
+.nav-links{display:none}
+.gal{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr 1fr}
+.foot-grid{grid-template-columns:1fr}
+section{padding:60px 0}
+}
+@media(max-width:560px){.gal{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">TEDDINGTON <span>INK</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact &amp; Booking</a>
+    </div>
+    <a class="btn btn-nav" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="kicker">Our Work</div>
+    <h1>Fresh from <em>the chair</em></h1>
+    <p>Every piece starts as a conversation and ends as a custom design made only for you. Here's a glimpse of what's been coming out of the Teddington studio lately.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kicker">Styles We Tattoo</div>
+    <h2 class="sec-title">Find the style that <em>speaks for you</em></h2>
+    <p class="sec-sub">Our artists work across a wide range of styles — bring a reference, a rough idea, or just a feeling, and we'll design it with you.</p>
+    <div class="styles">
+      <span class="style-tag">Custom Tattoos</span>
+      <span class="style-tag">Fine Line &amp; Minimal</span>
+      <span class="style-tag">Blackwork</span>
+      <span class="style-tag">Japanese Irezumi</span>
+      <span class="style-tag">Traditional</span>
+      <span class="style-tag">Cover-Ups</span>
+      <span class="style-tag">Professional Piercings</span>
+    </div>
+    <div class="gal" id="gal">
+      <figure data-cap="Custom blackwork piece"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80" alt="Custom blackwork tattoo" loading="lazy"><figcaption>Custom Blackwork<small>Tattoo</small></figcaption></figure>
+      <figure data-cap="Fine line floral work"><img src="https://images.unsplash.com/photo-1613505879804-bc32efd1e76d?auto=format&fit=crop&w=800&q=80" alt="Fine line tattoo" loading="lazy"><figcaption>Fine Line Floral<small>Tattoo</small></figcaption></figure>
+      <figure data-cap="Bold sleeve in progress"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=800&q=80" alt="Tattoo sleeve work" loading="lazy"><figcaption>Bold Sleeve Work<small>Tattoo</small></figcaption></figure>
+      <figure data-cap="Detailed black &amp; grey"><img src="https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=800&q=80" alt="Black and grey tattoo" loading="lazy"><figcaption>Black &amp; Grey Detail<small>Tattoo</small></figcaption></figure>
+      <figure data-cap="Curated piercing jewellery"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Piercing jewellery" loading="lazy"><figcaption>Curated Jewellery<small>Piercing</small></figcaption></figure>
+      <figure data-cap="Fresh piercing, healing beautifully"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80" alt="Piercing jewellery close-up" loading="lazy"><figcaption>Fresh &amp; Clean<small>Piercing</small></figcaption></figure>
+      <figure data-cap="In the studio"><img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=800&q=80" alt="Tattoo artist at work in the studio" loading="lazy"><figcaption>In The Studio<small>Behind the scenes</small></figcaption></figure>
+      <figure data-cap="Consultation &amp; design"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80" alt="Design consultation" loading="lazy"><figcaption>Design Consultation<small>Free, always</small></figcaption></figure>
+      <figure data-cap="The Teddington studio"><img src="https://images.unsplash.com/photo-1611695434369-a8f5d76ceb7b?auto=format&fit=crop&w=800&q=80" alt="Teddington Ink studio interior" loading="lazy"><figcaption>The Studio<small>Teddington</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+  <span class="close" id="lbClose" aria-label="Close">&times;</span>
+  <img id="lbImg" src="" alt="Gallery image enlarged">
+  <div class="cap" id="lbCap"></div>
+</div>
+
+<section class="process">
+  <div class="wrap">
+    <div class="sec-kicker">How It Works</div>
+    <h2 class="sec-title">From idea <em>to ink</em></h2>
+    <p class="sec-sub">First tattoo or fiftieth — the process is simple, relaxed and built around you.</p>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h3>Say Hello</h3><p>Message us on WhatsApp with your idea — a description, reference photos, or both.</p></div>
+      <div class="step"><span class="n">02</span><h3>Free Consultation</h3><p>Talk it through online or in person. Placement, size, style and honest pricing.</p></div>
+      <div class="step"><span class="n">03</span><h3>Custom Design</h3><p>Your artist draws a one-of-one design. We refine it together until it's exactly right.</p></div>
+      <div class="step"><span class="n">04</span><h3>Get Inked</h3><p>Top-tier equipment, sterile setup, calm studio. Walk out with work you're proud of.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wa-band">
+  <h2 class="serif">Like what you see?</h2>
+  <p>Message us on WhatsApp with your idea and a reference photo — we'll take it from there.</p>
+  <a class="btn btn-wa" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%20saw%20your%20gallery%20and%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+    Book via WhatsApp
+  </a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px;display:inline-block">TEDDINGTON <span>INK</span></a>
+        <p>Teddington's custom tattoo &amp; piercing studio since 2014. Bold ink. Clean piercings. Zero attitude.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact &amp; Booking</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>201 Waldegrave Road<br>Teddington, TW11 8LX</p>
+        <a href="https://wa.me/447902415284" target="_blank" rel="noopener">+44 7902 415284</a>
+        <a href="mailto:hello@teddingtonink.co.uk">hello@teddingtonink.co.uk</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Teddington Ink — Sample website prepared by Abdullah Virk</span>
+      <span>Mon–Sat 10:00–18:00 · Sun Closed</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),
+      img=document.getElementById('lbImg'),
+      cap=document.getElementById('lbCap'),
+      close=document.getElementById('lbClose');
+  document.querySelectorAll('#gal figure').forEach(function(f){
+    f.addEventListener('click',function(){
+      var im=f.querySelector('img');
+      img.src=im.src.replace('w=800','w=1400');
+      img.alt=im.alt;
+      cap.textContent=f.getAttribute('data-cap')||'';
+      lb.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function hide(){lb.classList.remove('open');document.body.style.overflow='';}
+  close.addEventListener('click',hide);
+  lb.addEventListener('click',function(e){if(e.target===lb)hide();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
+})();
+</script>
+
+</body>
+</html>

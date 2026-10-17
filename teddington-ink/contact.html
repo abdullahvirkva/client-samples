@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Booking | Teddington Ink — Tattoo &amp; Piercing Studio, Teddington</title>
+<meta name="description" content="Book your free consultation at Teddington Ink — 201 Waldegrave Road, Teddington. Call, WhatsApp or email us. Open Mon–Sat 10am–6pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0c0e;--bg2:#131316;--card:#17171b;--gold:#c9a227;--gold2:#e8c766;--text:#f2ede4;--muted:#a8a29a;--line:#26262c}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,12,14,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;letter-spacing:.06em}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold2)}
+.btn{display:inline-block;background:var(--gold);color:#111;font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 30px;border-radius:2px;transition:background .2s,transform .2s;border:none;cursor:pointer}
+.btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-nav{padding:10px 22px}
+.page-head{padding:170px 0 70px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#1b1b20 0%,var(--bg) 65%)}
+.kicker{color:var(--gold2);font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;margin-bottom:18px}
+.page-head h1{font-size:clamp(2.6rem,5.5vw,4.2rem);margin-bottom:16px}
+.page-head h1 em{color:var(--gold2);font-style:italic}
+.page-head p{color:var(--muted);max-width:640px;margin:0 auto;font-weight:300}
+section{padding:80px 0}
+/* CONTACT CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:70px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:40px 32px;text-align:center;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .icon{width:58px;height:58px;margin:0 auto 18px;border-radius:50%;background:rgba(201,162,39,.12);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold2)}
+.card h3{font-size:1.5rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.92rem;font-weight:300;margin-bottom:16px}
+.card a.cta{color:var(--gold2);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+/* BOOKING */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.sec-kicker{color:var(--gold);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;margin-bottom:14px}
+.sec-title{font-size:clamp(2rem,3.8vw,3rem);margin-bottom:18px}
+.sec-title em{color:var(--gold2);font-style:italic}
+.book-copy p{color:var(--muted);font-weight:300;margin-bottom:16px}
+.hours{width:100%;border-collapse:collapse;margin:26px 0}
+.hours td{padding:11px 4px;border-bottom:1px solid var(--line);color:#d8d2c6;font-weight:300}
+.hours td:last-child{text-align:right;color:var(--gold2)}
+form{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:40px 36px}
+form h3{font-size:1.7rem;margin-bottom:6px}
+form>p{color:var(--muted);font-size:.9rem;font-weight:300;margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:2px;color:var(--text);padding:13px 15px;font-family:'Inter',sans-serif;font-size:.95rem;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.field textarea{resize:vertical;min-height:110px}
+form .btn{width:100%;margin-top:6px}
+.form-note{margin-top:16px;font-size:.82rem;color:var(--muted);text-align:center;font-weight:300}
+/* MAP LINK */
+.map-link{display:block;margin-top:70px;position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.map-link img{width:100%;height:340px;object-fit:cover;filter:grayscale(35%) brightness(.75);transition:filter .3s}
+.map-link:hover img{filter:grayscale(0%) brightness(.9)}
+.map-pin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(8,8,10,.35)}
+.map-pin span.addr{background:rgba(12,12,14,.9);border:1px solid var(--gold);padding:12px 26px;border-radius:100px;font-size:.9rem;letter-spacing:.04em}
+.map-pin span.dir{color:var(--gold2);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+/* FAQ */
+.faq{background:var(--bg2);border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line);padding:22px 0}
+.faq-item h3{font-size:1.35rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-item h3::after{content:'+';color:var(--gold);font-size:1.8rem;font-family:'Inter',sans-serif}
+.faq-item.open h3::after{content:'–'}
+.faq-item p{color:var(--muted);font-weight:300;max-height:0;overflow:hidden;transition:max-height .35s ease;margin:0}
+.faq-item.open p{max-height:220px;margin-top:12px}
+footer{padding:64px 0 32px;background:#08080a}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:44px}
+.foot-grid h4{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.foot-grid p,.foot-grid a{color:var(--muted);font-size:.92rem;font-weight:300}
+.foot-grid a{display:block;padding:5px 0}
+.foot-grid a:hover{color:var(--gold2)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#6f6a62;font-size:.82rem}
+@media(max-width:900px){
+.nav-links{display:none}
+.cards{grid-template-columns:1fr}
+.book-grid{grid-template-columns:1fr;gap:48px}
+.foot-grid{grid-template-columns:1fr}
+section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">TEDDINGTON <span>INK</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact &amp; Booking</a>
+    </div>
+    <a class="btn btn-nav" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="kicker">Contact &amp; Booking</div>
+    <h1>Let's talk <em>ink</em></h1>
+    <p>Free consultations, honest advice, zero pressure. Message us on WhatsApp for the quickest reply — or drop by the studio.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="cards">
+      <div class="card">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></div>
+        <h3>WhatsApp Us</h3>
+        <p>The quickest way to book — send your idea and reference photos.</p>
+        <a class="cta" href="https://wa.me/447902415284?text=Hi%20Teddington%20Ink!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">+44 7902 415284 →</a>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></div>
+        <h3>Call the Studio</h3>
+        <p>Prefer to talk? Call us during opening hours, Mon–Sat.</p>
+        <a class="cta" href="tel:+447902415284">+44 7902 415284 →</a>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+        <h3>Email Us</h3>
+        <p>For longer enquiries, portfolios and guest artist spots.</p>
+        <a class="cta" href="mailto:hello@teddingtonink.co.uk">hello@teddingtonink.co.uk →</a>
+      </div>
+    </div>
+
+    <div class="book-grid">
+      <div class="book-copy">
+        <div class="sec-kicker">Book a Free Consultation</div>
+        <h2 class="sec-title">Start with <em>a chat</em></h2>
+        <p>Every tattoo and piercing starts with a conversation. Tell us your vision — style, size, placement — and we'll advise honestly on what's possible, what it costs, and how to get the best result.</p>
+        <p><strong style="color:var(--text)">Online or in person.</strong> Fill in the form and it opens WhatsApp with your message ready to send — the fastest way to reach the team.</p>
+        <table class="hours">
+          <tr><td>Monday – Saturday</td><td>10:00 am – 6:00 pm</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="font-size:.92rem"><strong style="color:var(--text)">Studio:</strong> 201 Waldegrave Road, Teddington, TW11 8LX<br>
+        <strong style="color:var(--text)">Serving:</strong> Teddington · Twickenham · Hampton · Kingston · Richmond &amp; beyond</p>
+      </div>
+      <form id="bookForm">
+        <h3>Request a booking</h3>
+        <p>Fill this in — it opens WhatsApp with everything ready to send.</p>
+        <div class="field">
+          <label for="fName">Your name</label>
+          <input id="fName" type="text" placeholder="e.g. Alex Morgan" required>
+        </div>
+        <div class="field">
+          <label for="fService">What are you after?</label>
+          <select id="fService">
+            <option>Custom tattoo</option>
+            <option>Piercing</option>
+            <option>Cover-up / rework</option>
+            <option>Just advice for now</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fMsg">Your idea</label>
+          <textarea id="fMsg" placeholder="Tell us about the design, size, placement — anything that helps." required></textarea>
+        </div>
+        <button class="btn" type="submit">Send via WhatsApp</button>
+        <p class="form-note">No account needed — it simply opens WhatsApp with your message pre-filled.</p>
+      </form>
+    </div>
+
+    <a class="map-link" href="https://www.google.com/maps/place/Teddington+Ink+Tattoo/@51.4324971,-0.3385675,15z" target="_blank" rel="noopener" aria-label="Open Teddington Ink in Google Maps">
+      <img src="https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=1600&q=80" alt="Map — find Teddington Ink" loading="lazy">
+      <span class="map-pin">
+        <span class="addr">201 Waldegrave Road, Teddington TW11 8LX</span>
+        <span class="dir">Open in Google Maps →</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-kicker">Good to Know</div>
+    <h2 class="sec-title">Questions, <em>answered</em></h2>
+    <p class="sec-sub" style="margin-bottom:36px">Everything first-timers usually ask before booking.</p>
+    <div class="faq-item">
+      <h3>Do I need an appointment or can I walk in?</h3>
+      <p>We recommend booking a free consultation first so an artist can plan your design properly — message us on WhatsApp and we'll find a time that suits you.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How much will my tattoo cost?</h3>
+      <p>Every piece is quoted individually based on size, detail and placement. Send your idea on WhatsApp for an honest, no-obligation quote — no upselling, ever.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is the studio licensed and hygienic?</h3>
+      <p>Yes — we're a fully licensed studio. We follow strict clinical hygiene protocols, sterilise everything and use single-use needles as standard.</p>
+    </div>
+    <div class="faq-item">
+      <h3>I'm nervous — it's my first tattoo / piercing.</h3>
+      <p>Most of our clients were nervous too. We're known for a calm, welcoming vibe and honest advice — come for a chat first and decide in your own time.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What piercing jewellery do you use?</h3>
+      <p>Only top-tier, body-safe jewellery — and we'll guide you through aftercare so everything heals beautifully.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px;display:inline-block">TEDDINGTON <span>INK</span></a>
+        <p>Teddington's custom tattoo &amp; piercing studio since 2014. Bold ink. Clean piercings. Zero attitude.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact &amp; Booking</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>201 Waldegrave Road<br>Teddington, TW11 8LX</p>
+        <a href="https://wa.me/447902415284" target="_blank" rel="noopener">+44 7902 415284</a>
+        <a href="mailto:hello@teddingtonink.co.uk">hello@teddingtonink.co.uk</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Teddington Ink — Sample website prepared by Abdullah Virk</span>
+      <span>Mon–Sat 10:00–18:00 · Sun Closed</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Booking form -> WhatsApp with pre-filled message
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('fName').value.trim(),
+        svc=document.getElementById('fService').value,
+        msg=document.getElementById('fMsg').value.trim();
+    var text='Hi Teddington Ink! I\'m '+name+'. I\'d like to book a free consultation for: '+svc+'. My idea: '+msg;
+    window.open('https://wa.me/447902415284?text='+encodeURIComponent(text),'_blank');
+  });
+  // FAQ accordion
+  document.querySelectorAll('.faq-item h3').forEach(function(h){
+    h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
+  });
+})();
+</script>
+
+</body>
+</html>
