@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandara House | Authentic Thai Cuisine in Lynden, WA</title>
+<meta name="description" content="Chandara House — authentic Thai cuisine in Lynden, WA. Reopening October 2026 under new ownership. 655 Front St Ste 10, Lynden WA 98264. (360) 393-3068.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#130b07; --bg2:#1c1009; --card:#221309;
+  --red:#a31621; --red-deep:#7a0f18; --gold:#d4a24e; --gold-soft:#e8c877;
+  --cream:#f6ecda; --muted:#c9b49a; --line:rgba(212,162,78,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;line-height:1.7;font-size:16px}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.2}
+img{max-width:100%;display:block}
+a{color:var(--gold);text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+/* banner */
+.reopen{background:linear-gradient(90deg,var(--red-deep),var(--red));color:#fff;text-align:center;padding:10px 16px;font-size:14px;letter-spacing:.4px}
+.reopen strong{color:var(--gold-soft)}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(19,11,7,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1140px;margin:0 auto}
+.brand{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--cream);letter-spacing:.5px}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--cream);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--red);color:#fff!important;padding:10px 20px;border-radius:30px;font-size:13px!important}
+.nav-cta:hover{background:var(--red-deep)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--cream);font-size:20px;padding:6px 12px;border-radius:8px;cursor:pointer}
+/* hero */
+.hero{position:relative;min-height:82vh;display:flex;align-items:center;background:url('https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,11,7,.55),rgba(19,11,7,.88))}
+.hero-in{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:90px 22px;width:100%}
+.kicker{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:13px;font-weight:600;margin-bottom:14px}
+.hero h1{font-size:clamp(44px,7vw,84px);color:#fff;margin-bottom:16px}
+.hero h1 em{color:var(--gold-soft);font-style:italic}
+.hero p{max-width:560px;color:var(--muted);font-size:18px;margin-bottom:30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 32px;border-radius:40px;font-weight:600;letter-spacing:.5px;font-size:15px;transition:.25s}
+.btn-gold{background:var(--gold);color:#1c1009}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold)}
+.btn-ghost:hover{background:rgba(212,162,78,.12)}
+.hero-badges{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap}
+.hb{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px}
+.hb b{color:var(--gold-soft);font-size:20px}
+/* sections */
+section{padding:84px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.sec-head h2{font-size:clamp(32px,4.5vw,48px);color:#fff;margin-bottom:12px}
+.sec-head h2 em{color:var(--gold-soft);font-style:italic}
+.sec-head p{color:var(--muted)}
+.divider{width:70px;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));margin:0 auto 22px;border-radius:2px}
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.story img{border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.5);border:1px solid var(--line)}
+.story h2{font-size:clamp(30px,4vw,44px);color:#fff;margin-bottom:18px}
+.story p{color:var(--muted);margin-bottom:16px}
+.quote{border-left:3px solid var(--gold);padding-left:18px;font-style:italic;color:var(--cream);margin:22px 0}
+/* dishes */
+.dish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s}
+.dish:hover{transform:translateY(-6px);border-color:var(--gold)}
+.dish img{height:220px;width:100%;object-fit:cover}
+.dish-body{padding:22px}
+.dish-body h3{font-size:24px;color:#fff;margin-bottom:8px}
+.dish-body p{color:var(--muted);font-size:14px;margin-bottom:12px}
+.price{color:var(--gold-soft);font-weight:600;font-size:17px}
+/* reopen */
+.reopen-sec{background:linear-gradient(135deg,#200f08,#33130a);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reopen-box{max-width:760px;margin:0 auto;text-align:center}
+.reopen-box h2{font-size:clamp(32px,4.5vw,50px);color:#fff;margin-bottom:16px}
+.reopen-box h2 em{color:var(--gold-soft);font-style:italic}
+.reopen-box p{color:var(--muted);margin-bottom:26px}
+/* visit strip */
+.visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px 26px;text-align:center}
+.vcard .icon{font-size:34px;margin-bottom:12px}
+.vcard h3{font-size:22px;color:#fff;margin-bottom:8px}
+.vcard p{color:var(--muted);font-size:15px}
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#0e0705}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:28px}
+.foot-grid h4{color:var(--gold);font-size:15px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.foot-grid p,.foot-grid a{color:var(--muted);font-size:14px;display:block;margin-bottom:6px}
+.credit{text-align:center;color:#8a7458;font-size:13px;border-top:1px solid rgba(212,162,78,.12);padding-top:22px}
+@media(max-width:860px){
+  .story{grid-template-columns:1fr}
+  .dish-grid,.visit-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#160d08;flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  nav{position:sticky}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="reopen">✨ <strong>Reopening October 2026</strong> under new ownership — same name, brand-new kitchen &amp; menu ✨</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Chandara <span>House</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Visit Us</a>
+      <a class="nav-cta" href="tel:+13603933068">(360) 393-3068</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="kicker">Authentic Thai Cuisine · Lynden, WA</div>
+    <h1>From Bangkok <em>to Lynden,</em><br>with love in every dish.</h1>
+    <p>A Thai family kitchen serving heartfelt, authentic recipes — fresh ingredients, bold flavors, and a genuine Thai smile. Reopening this October with a refreshed dining room and an expanded menu.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="menu.html">Explore the Menu</a>
+      <a class="btn btn-ghost" href="contact.html">Find Us</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hb"><b>4.8★</b> 137 Google reviews</div>
+      <div class="hb"><b>100%</b> family recipes</div>
+      <div class="hb"><b>New</b> owners, new kitchen</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="divider"></div>
+      <h2>Our <em>Story</em></h2>
+      <p>A new chapter for a Lynden favorite.</p>
+    </div>
+    <div class="story">
+      <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&q=80" alt="Fresh Thai dishes served at Chandara House">
+      <div>
+        <h2>A new family, the same warm welcome.</h2>
+        <p>Our culinary journey began in Thailand, where we cooked heartfelt meals for our family and friends. After running a restaurant near Seattle, a road trip to Lynden stole our hearts — the lush fields, the tight-knit community, the genuine warmth of the people.</p>
+        <p>We recently took over Chandara House and completely refreshed the menu with our own authentic family recipes. The name on the door is the same, but the food and the smiles inside are brand new.</p>
+        <div class="quote">"Every sauce, curry paste, and dish is made from our family's authentic recipes — just like back home."</div>
+        <a class="btn btn-gold" href="menu.html">See What's Cooking</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="divider"></div>
+      <h2>Guest <em>Favorites</em></h2>
+      <p>Dishes our neighbors keep coming back for.</p>
+    </div>
+    <div class="dish-grid">
+      <div class="dish">
+        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&q=80" alt="Pad Thai">
+        <div class="dish-body"><h3>Pad Thai</h3><p>Rice noodles, egg, bean sprouts, crushed peanut &amp; tamarind sauce — your choice of chicken, pork, shrimp or tofu.</p><span class="price">$20.16</span></div>
+      </div>
+      <div class="dish">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Thai curries with rice">
+        <div class="dish-body"><h3>Red Curry</h3><p>Creamy coconut curry with bamboo shoots, bell peppers &amp; fresh basil. The perfect amount of heat.</p><span class="price">$24.75</span></div>
+      </div>
+      <div class="dish">
+        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80" alt="Choo Chee Salmon">
+        <div class="dish-body"><h3>Choo Chee Salmon</h3><p>Pan-seared salmon in rich choo chee curry sauce with kaffir lime — a house signature.</p><span class="price">$31.25</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px"><a class="btn btn-ghost" href="menu.html">View Full Menu</a></div>
+  </div>
+</section>
+
+<section class="reopen-sec">
+  <div class="wrap">
+    <div class="reopen-box">
+      <div class="kicker">A new chapter</div>
+      <h2>Reopening <em>October 2026</em></h2>
+      <p>We're putting the finishing touches on a refreshed dining room and an expanded menu of our family's authentic Thai recipes. Follow along — we can't wait to welcome Lynden back to our table.</p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn btn-gold" href="tel:+13603933068">Call (360) 393-3068</a>
+        <a class="btn btn-ghost" href="contact.html">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="divider"></div>
+      <h2>Visit <em>Us</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="vcard"><div class="icon">📍</div><h3>Find Us</h3><p>655 Front St Ste 10<br>Lynden, WA 98264<br><span style="font-size:13px">Inside the Dutch Village Mall</span></p></div>
+      <div class="vcard"><div class="icon">📞</div><h3>Call Us</h3><p><a href="tel:+13603933068">(360) 393-3068</a><br><span style="font-size:13px">Call ahead for reopening hours</span></p></div>
+      <div class="vcard"><div class="icon">✉️</div><h3>Email Us</h3><p><a href="mailto:chandarahouselynden@gmail.com">chandarahouselynden@gmail.com</a><br><span style="font-size:13px">Catering &amp; large orders welcome</span></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Chandara House</h4><p>Authentic Thai cuisine in Lynden, WA.<br>Reopening October 2026.</p></div>
+      <div><h4>Visit</h4><p>655 Front St Ste 10<br>Lynden, WA 98264</p></div>
+      <div><h4>Contact</h4><a href="tel:+13603933068">(360) 393-3068</a><a href="mailto:chandarahouselynden@gmail.com">chandarahouselynden@gmail.com</a></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Visit Us</a></div>
+    </div>
+    <div class="credit">Sample website prepared by Abdullah Virk</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+</body>
+</html>

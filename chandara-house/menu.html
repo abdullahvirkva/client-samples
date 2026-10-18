@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | Chandara House — Authentic Thai Cuisine, Lynden WA</title>
+<meta name="description" content="The Chandara House menu: appetizers, salads, soups, curries, noodles, fried rice and Thai desserts. 655 Front St Ste 10, Lynden WA. (360) 393-3068.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#130b07; --bg2:#1c1009; --card:#221309;
+  --red:#a31621; --red-deep:#7a0f18; --gold:#d4a24e; --gold-soft:#e8c877;
+  --cream:#f6ecda; --muted:#c9b49a; --line:rgba(212,162,78,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;line-height:1.7;font-size:16px}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.25}
+a{color:var(--gold);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.reopen{background:linear-gradient(90deg,var(--red-deep),var(--red));color:#fff;text-align:center;padding:10px 16px;font-size:14px}
+.reopen strong{color:var(--gold-soft)}
+nav{position:sticky;top:0;z-index:50;background:rgba(19,11,7,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1140px;margin:0 auto}
+.brand{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--cream)}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--cream);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--red);color:#fff!important;padding:10px 20px;border-radius:30px;font-size:13px!important}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--cream);font-size:20px;padding:6px 12px;border-radius:8px;cursor:pointer}
+.page-hero{position:relative;padding:90px 0 70px;text-align:center;background:url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
+.page-hero::after{content:'';position:absolute;inset:0;background:rgba(19,11,7,.82)}
+.page-hero .wrap{position:relative;z-index:2}
+.kicker{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:13px;font-weight:600;margin-bottom:12px}
+.page-hero h1{font-size:clamp(40px,6vw,64px);color:#fff}
+.page-hero h1 em{color:var(--gold-soft);font-style:italic}
+.page-hero p{color:var(--muted);max-width:600px;margin:14px auto 0}
+.menu-sec{padding:56px 0 10px}
+.cat{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+.cat h2{font-size:34px;color:#fff;white-space:nowrap}
+.cat h2 em{color:var(--gold-soft);font-style:italic}
+.cat .rule{flex:1;height:1px;background:var(--line)}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:8px 44px}
+.item{padding:14px 0;border-bottom:1px dashed rgba(212,162,78,.18)}
+.item-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.item-head h3{font-size:21px;color:var(--cream);font-weight:600}
+.item-head .p{color:var(--gold-soft);font-weight:600;white-space:nowrap}
+.item p.desc{color:var(--muted);font-size:14px;margin-top:4px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:40px 0;color:var(--muted);font-size:14px;text-align:center}
+.note b{color:var(--gold-soft)}
+.cta-band{text-align:center;padding:60px 0 80px}
+.cta-band h2{font-size:clamp(28px,4vw,42px);color:#fff;margin-bottom:14px}
+.cta-band p{color:var(--muted);margin-bottom:26px}
+.btn{display:inline-block;padding:14px 32px;border-radius:40px;font-weight:600;font-size:15px;background:var(--gold);color:#1c1009;margin:6px}
+.btn:hover{background:var(--gold-soft)}
+.btn.ghost{background:none;border:1px solid var(--gold);color:var(--gold)}
+footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#0e0705}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:28px;max-width:1140px;margin-left:auto;margin-right:auto;padding:0 22px}
+.foot-grid h4{color:var(--gold);font-size:15px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.foot-grid p,.foot-grid a{color:var(--muted);font-size:14px;display:block;margin-bottom:6px}
+.credit{text-align:center;color:#8a7458;font-size:13px;border-top:1px solid rgba(212,162,78,.12);padding-top:22px}
+@media(max-width:760px){
+  .items{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#160d08;flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+</style>
+</head>
+<body>
+
+<div class="reopen">✨ <strong>Reopening October 2026</strong> under new ownership — same name, brand-new kitchen &amp; menu ✨</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Chandara <span>House</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="contact.html">Visit Us</a>
+      <a class="nav-cta" href="tel:+13603933068">(360) 393-3068</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="kicker">Made fresh to order</div>
+    <h1>Our <em>Menu</em></h1>
+    <p>Every sauce, curry paste and dish made from our family's authentic Thai recipes. Choose your spice level — mild and cozy, or a bold Thai kick.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Appetizers</h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Spring Rolls</h3><span class="p">$12.59</span></div><p class="desc">Crispy rolls with glass noodles, carrots, taro &amp; cabbage, Thai sweet &amp; sour sauce.</p></div>
+      <div class="item"><div class="item-head"><h3>Pot Stickers</h3><span class="p">$14.28</span></div><p class="desc">Grilled pork or chicken &amp; vegetable dumplings with homemade ginger sauce.</p></div>
+      <div class="item"><div class="item-head"><h3>Chicken Satay</h3><span class="p">$17.98</span></div><p class="desc">Grilled marinated chicken skewers with peanut sauce &amp; cucumber relish.</p></div>
+      <div class="item"><div class="item-head"><h3>Crab Cheese</h3><span class="p">$14.28</span></div><p class="desc">Golden crab &amp; cream cheese wontons with sweet chili sauce.</p></div>
+      <div class="item"><div class="item-head"><h3>Gui Chai</h3><span class="p">$9.85</span></div><p class="desc">Steamed chive dumplings with light soy dipping sauce.</p></div>
+      <div class="item"><div class="item-head"><h3>Roti with Curry Dip</h3><span class="p">$14.28</span></div><p class="desc">Flaky Thai roti served with our house curry for dipping.</p></div>
+    </div>
+  </div>
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Salads</h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Chandara's House Salad</h3><span class="p">$24.68</span></div><p class="desc">Our signature salad — crisp greens, fresh herbs &amp; house dressing.</p></div>
+      <div class="item"><div class="item-head"><h3>Larb Gai</h3><span class="p">$24.68</span></div><p class="desc">Minced chicken with toasted rice, lime, chili &amp; fresh mint.</p></div>
+      <div class="item"><div class="item-head"><h3>Yum Woon Sen</h3><span class="p">$25.99</span></div><p class="desc">Glass noodle salad with shrimp, minced pork &amp; zesty lime dressing.</p></div>
+    </div>
+  </div>
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Soups</h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Tom Yum</h3><span class="p">$20.79</span></div><p class="desc">Thailand's famous hot &amp; sour soup with lemongrass, galangal &amp; mushrooms.</p></div>
+      <div class="item"><div class="item-head"><h3>Tom Kah</h3><span class="p">$20.79</span></div><p class="desc">Creamy coconut soup with galangal, mushrooms &amp; a squeeze of lime.</p></div>
+      <div class="item"><div class="item-head"><h3>Wonton Soup</h3><span class="p">$19.48</span></div><p class="desc">Delicate pork wontons in clear savory broth with greens.</p></div>
+      <div class="item"><div class="item-head"><h3>Noodle Soup</h3><span class="p">$19.48</span></div><p class="desc">Comforting rice-noodle soup with your choice of chicken, pork or tofu.</p></div>
+    </div>
+  </div>
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Chandara's <em>Curries</em></h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Red Curry</h3><span class="p">$24.75</span></div><p class="desc">Bamboo shoots, bell peppers &amp; fresh basil in creamy coconut curry.</p></div>
+      <div class="item"><div class="item-head"><h3>Green Curry</h3><span class="p">$24.75</span></div><p class="desc">Our spiciest classic — Thai eggplant, bamboo &amp; sweet basil.</p></div>
+      <div class="item"><div class="item-head"><h3>Yellow Curry</h3><span class="p">$24.75</span></div><p class="desc">Mild &amp; cozy — potatoes, onions &amp; carrots in golden curry.</p></div>
+      <div class="item"><div class="item-head"><h3>Massaman Curry</h3><span class="p">$24.75</span></div><p class="desc">Slow-simmered with peanuts, potatoes &amp; warm spices.</p></div>
+      <div class="item"><div class="item-head"><h3>Choo Chee Salmon</h3><span class="p">$31.25</span></div><p class="desc">Pan-seared salmon in rich choo chee curry with kaffir lime — a house signature.</p></div>
+      <div class="item"><div class="item-head"><h3>Curry with Pineapple</h3><span class="p">$24.75</span></div><p class="desc">Sweet &amp; tangy red curry with juicy pineapple chunks.</p></div>
+    </div>
+  </div>
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Noodles &amp; <em>Stir-Fry</em></h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Pad Thai</h3><span class="p">$20.16</span></div><p class="desc">Rice noodles, egg, bean sprouts, crushed peanut &amp; tamarind — chicken, pork, shrimp or tofu.</p></div>
+      <div class="item"><div class="item-head"><h3>Pad See Ew</h3><span class="p">$21.29</span></div><p class="desc">Wide rice noodles wok-tossed in sweet soy with Chinese broccoli &amp; egg.</p></div>
+      <div class="item"><div class="item-head"><h3>Pad Kee Mao</h3><span class="p">$23.50</span></div><p class="desc">"Drunken noodles" — fiery basil, peppers &amp; wide rice noodles.</p></div>
+      <div class="item"><div class="item-head"><h3>Pad Woon Sen</h3><span class="p">$22.50</span></div><p class="desc">Stir-fried glass noodles with egg, cabbage &amp; mushrooms.</p></div>
+      <div class="item"><div class="item-head"><h3>Kra Pao</h3><span class="p">$22.11</span></div><p class="desc">Holy basil stir-fry with chili &amp; garlic — Bangkok street-style.</p></div>
+      <div class="item"><div class="item-head"><h3>Cashew Gai</h3><span class="p">$24.75</span></div><p class="desc">Chicken with roasted cashews, peppers &amp; onions in savory sauce.</p></div>
+      <div class="item"><div class="item-head"><h3>Garlic Lover</h3><span class="p">$23.48</span></div><p class="desc">Your choice of protein sautéed with loads of crispy garlic &amp; pepper.</p></div>
+      <div class="item"><div class="item-head"><h3>Swimming Rama</h3><span class="p">$24.75</span></div><p class="desc">Steamed spinach &amp; chicken crowned with creamy peanut sauce.</p></div>
+    </div>
+  </div>
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Fried <em>Rice</em></h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Dara's Fried Rice</h3><span class="p">$27.59</span></div><p class="desc">Our loaded house fried rice with egg, onion &amp; your choice of protein.</p></div>
+      <div class="item"><div class="item-head"><h3>Basil Fried Rice</h3><span class="p">$23.99</span></div><p class="desc">Spicy basil, peppers &amp; egg tossed through jasmine rice.</p></div>
+      <div class="item"><div class="item-head"><h3>Coconut Fried Rice</h3><span class="p">$23.99</span></div><p class="desc">Fragrant coconut rice with cashews &amp; raisins.</p></div>
+      <div class="item"><div class="item-head"><h3>Crab Fried Rice</h3><span class="p">$29.95</span></div><p class="desc">Real crab meat folded through buttery fried rice.</p></div>
+    </div>
+  </div>
+
+  <div class="menu-sec">
+    <div class="cat"><h2>Desserts &amp; <em>Drinks</em></h2><div class="rule"></div></div>
+    <div class="items">
+      <div class="item"><div class="item-head"><h3>Black Sticky Rice</h3><span class="p">$9.25</span></div><p class="desc">Warm black sticky rice with sweet coconut cream.</p></div>
+      <div class="item"><div class="item-head"><h3>Black Sticky Rice with Ice Cream</h3><span class="p">$14.59</span></div><p class="desc">Our classic dessert crowned with vanilla ice cream.</p></div>
+      <div class="item"><div class="item-head"><h3>Thai Iced Tea</h3><span class="p">$7.82</span></div><p class="desc">The iconic orange-spiced Thai tea with cream.</p></div>
+      <div class="item"><div class="item-head"><h3>Thai Iced Coffee</h3><span class="p">$7.82</span></div><p class="desc">Bold Thai coffee, sweetened condensed milk, over ice.</p></div>
+    </div>
+  </div>
+
+  <div class="note"><b>Good to know:</b> most dishes can be made with chicken, pork, beef, shrimp, tofu or extra veggies — just ask. Spice levels from 0 (mild) to Thai-hot. Prices may vary slightly at reopening.</div>
+
+  <div class="cta-band">
+    <h2>Hungry <span class="serif" style="font-style:italic;color:var(--gold-soft)">already?</span></h2>
+    <p>Call ahead for pickup, or come taste the new kitchen this October.</p>
+    <a class="btn" href="tel:+13603933068">Call (360) 393-3068</a>
+    <a class="btn ghost" href="contact.html">Plan Your Visit</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div><h4>Chandara House</h4><p>Authentic Thai cuisine in Lynden, WA.<br>Reopening October 2026.</p></div>
+    <div><h4>Visit</h4><p>655 Front St Ste 10<br>Lynden, WA 98264</p></div>
+    <div><h4>Contact</h4><a href="tel:+13603933068">(360) 393-3068</a><a href="mailto:chandarahouselynden@gmail.com">chandarahouselynden@gmail.com</a></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Visit Us</a></div>
+  </div>
+  <div class="credit">Sample website prepared by Abdullah Virk</div>
+</footer>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+</body>
+</html>
